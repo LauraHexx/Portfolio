@@ -1,0 +1,22 @@
+@import "src/assets/styles/mixins-and-variables.scss";
+
+header {
+  @include centerAlignItems();
+  justify-content: space-between;
+  background-color: $color-main;
+  padding: 37px $spacing-to-sides;
+}
+
+nav {
+  @include centerJustifyContent();
+  align-items: flex-start;
+  gap: 29px;
+  a {
+    color: $color-white;
+    text-decoration: none;
+    font-size: 23px;
+    &:hover {
+      color: $color-bright-blue;
+    }
+  }
+}
