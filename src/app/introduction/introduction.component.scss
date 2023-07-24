@@ -51,6 +51,8 @@ section {
 .btn-container {
   @include centerAll();
   margin-top: 30px;
+  height: 58px;
+
   button {
     font-size: 23px;
     color: $color-white;
@@ -69,8 +71,9 @@ section {
 }
 
 .bg-gradient {
+  display: none;
   position: absolute;
-  top: 672px;
+  top: 673px;
   left: 0;
   right: 0;
   width: 100%;

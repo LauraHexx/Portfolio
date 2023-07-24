@@ -1,0 +1,27 @@
+@import "src/assets/styles/mixins-and-variables.scss";
+
+section {
+  @include centerAlignItems();
+  gap: 42px;
+  background-color: $color-main;
+}
+
+.blue-line {
+  width: 7vw;
+  height: 3px;
+  background-color: $color-bright-blue;
+}
+
+.icons-ccontainer {
+  @include centerAlignItems();
+  gap: 42px;
+  img {
+    width: 30px;
+    height: 30px;
+    transition: all 225ms ease-in-out;
+    &:hover {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
