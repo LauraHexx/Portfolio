@@ -7,30 +7,33 @@ section {
   padding: 0 10%;
 }
 
-.profile-img-big-container {
-  background-image: url("./../../assets/img/bg-profile-image-big.png");
-  background-position: center center;
+.bg-profile-img-big {
+  position: absolute;
+  left: 0;
+  width: 707px;
+  height: 671px;
 }
 
 .profile-img-big {
   width: 646px;
   height: 705px;
   object-fit: cover;
+  z-index: 1;
 }
 
-.textContainer {
+.text-container {
   @include centerAlignItems();
   justify-content: space-between;
   gap: 35px;
 }
 
-.iAmContainer {
+.i-am-container {
   font-size: 64px;
   transform: rotate(-90deg);
   color: $color-white;
 }
 
-.nameTitleTalkContainer {
+.name-title-container {
   display: flex;
   flex-direction: column;
   h1 {
@@ -45,7 +48,7 @@ section {
   }
 }
 
-.btnContainer {
+.btn-container {
   @include centerAll();
   margin-top: 30px;
   button {
@@ -58,5 +61,9 @@ section {
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
     cursor: pointer;
     transition: all 225ms ease-in-out;
+    &:hover {
+      padding: 20px 40px;
+      background-color: $color-middle-blue;
+    }
   }
 }
