@@ -4,8 +4,15 @@ section {
   position: relative;
   @include centerAlignItems();
   justify-content: space-between;
+  gap: 42px;
   background-color: $color-main;
   padding: 0px $spacing-to-sides;
+}
+
+.icons-and-email {
+  @include centerAlignItems();
+  justify-content: space-evenly;
+  gap: 42px;
 }
 
 .blue-line {
@@ -17,7 +24,7 @@ section {
   background-color: $color-bright-blue;
 }
 
-.icons-ccontainer {
+.icons-container {
   @include centerAlignItems();
   gap: 42px;
   img {
