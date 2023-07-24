@@ -1,13 +1,18 @@
 @import "src/assets/styles/mixins-and-variables.scss";
 
 section {
+  position: relative;
   @include centerAlignItems();
-  gap: 42px;
+  justify-content: space-between;
   background-color: $color-main;
+  padding: 0px $spacing-to-sides;
 }
 
 .blue-line {
-  width: 7vw;
+  position: absolute;
+  left: 0;
+  width: $spacing-to-sides;
+
   height: 3px;
   background-color: $color-bright-blue;
 }
