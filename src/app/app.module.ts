@@ -4,21 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { IntroductionComponent } from './introduction/introduction.component';
+import { IAmComponent } from './i-am/i-am.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    IntroductionComponent,
-    AboutMeComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent, HeaderComponent, IAmComponent, AboutMeComponent],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

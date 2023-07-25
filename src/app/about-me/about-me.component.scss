@@ -6,7 +6,8 @@ section {
   justify-content: space-between;
   gap: 42px;
   background-color: $color-main;
-  padding: 0px $spacing-to-sides;
+  padding: $spacing-top-sections $spacing-to-sides $spacing-bottom-sections;
+  margin-top: 65px;
 }
 
 .icons-and-email {
@@ -19,7 +20,6 @@ section {
   position: absolute;
   left: 0;
   width: $spacing-to-sides;
-
   height: 3px;
   background-color: $color-bright-blue;
 }

@@ -2,7 +2,9 @@ $color-main: #141d2f;
 $color-bright-blue: #00bee8;
 $color-middle-blue: #4b47ff;
 $color-white: #ffffff;
-$spacing-to-sides: 10%;
+$spacing-to-sides: 20%;
+$spacing-top-sections: 50px;
+$spacing-bottom-sections: 50px;
 $spacing-btn: 15px 30px;
 
 @mixin centerAll() {
