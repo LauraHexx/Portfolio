@@ -7,13 +7,16 @@ section {
   gap: 42px;
   background-color: $color-main;
   padding: $spacing-top-sections $spacing-to-sides $spacing-bottom-sections;
-  margin-top: 165px;
+  margin-top: 150px;
   z-index: 3;
+  a {
+    font-size: 23px;
+    color: $color-white;
+  }
 }
 
 .icons-and-email {
   @include centerAlignItems();
-  justify-content: space-evenly;
   gap: 42px;
 }
 
@@ -28,6 +31,7 @@ section {
 .icons-container {
   @include centerAlignItems();
   gap: 42px;
+  margin-left: 42px;
   img {
     width: 30px;
     height: 30px;
