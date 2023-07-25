@@ -7,7 +7,8 @@ section {
   gap: 42px;
   background-color: $color-main;
   padding: $spacing-top-sections $spacing-to-sides $spacing-bottom-sections;
-  margin-top: 65px;
+  margin-top: 165px;
+  z-index: 3;
 }
 
 .icons-and-email {

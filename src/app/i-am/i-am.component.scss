@@ -13,6 +13,7 @@ section {
   bottom: 0;
   width: 707px;
   height: 671px;
+  z-index: 0;
 }
 
 .profile-img-big {
@@ -73,9 +74,10 @@ section {
 
 .bg-gradient {
   position: absolute;
-  top: 666px;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 440px;
+  top: 512px;
+  width: 104vw;
+  left: -18px;
+  transform: rotate(3deg);
+  height: 702px;
+  z-index: 2;
 }
