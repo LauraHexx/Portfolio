@@ -32,19 +32,17 @@ section {
 .i-am-container {
   font-size: 64px;
   transform: rotate(-90deg);
-  color: $color-white;
 }
 
 .name-title-container {
   display: flex;
   flex-direction: column;
   h1 {
-    color: $color-white;
     font-size: 90px;
     margin: 0;
   }
   h2 {
-    color: $color-middle-blue;
+    color: $color-middle-blue !important;
     font-size: 58px;
     margin: 0;
   }
