@@ -4,8 +4,8 @@ section {
   position: relative;
   @include align-center-flexbox();
   justify-content: space-between;
-  background-color: $color-main;
-  padding: $spacing-top-sections $spacing-to-sides $spacing-bottom-sections;
+  @include general-layout();
+  margin: 0 !important;
 }
 
 .bg-profile-img-big {
@@ -26,7 +26,6 @@ section {
 .text-container {
   @include align-center-flexbox();
   justify-content: space-between;
-  gap: 35px;
 }
 
 .i-am-container {
@@ -35,8 +34,8 @@ section {
 }
 
 .name-title-container {
-  display: flex;
-  flex-direction: column;
+  @include column-flex-box();
+  align-items: flex-end;
   h1 {
     font-size: 90px;
     margin: 0;

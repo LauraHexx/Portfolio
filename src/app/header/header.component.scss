@@ -3,7 +3,6 @@
 header {
   @include align-center-flexbox();
   justify-content: space-between;
-  background-color: $color-main;
   padding: 37px $spacing-to-sides;
 }
 

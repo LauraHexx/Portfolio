@@ -2,9 +2,7 @@
 
 section {
   @include column-flex-box();
-  background-color: $color-main;
-  padding: $spacing-top-sections $spacing-to-sides $spacing-bottom-sections;
-  padding-top: $spacing-between-sections;
+  @include general-layout();
 }
 
 aside {

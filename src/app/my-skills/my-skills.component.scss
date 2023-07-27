@@ -3,9 +3,7 @@
 section {
   @include align-center-flexbox();
   justify-content: space-between;
-  background-color: $color-main;
-  padding: $spacing-top-sections $spacing-to-sides $spacing-bottom-sections;
-  padding-top: $spacing-between-sections;
+  @include general-layout();
 }
 
 .icons-container {
@@ -41,7 +39,6 @@ section {
 
 .headline-container {
   @include center-all-flexbox();
-
   h2 {
     text-align: center !important;
   }
