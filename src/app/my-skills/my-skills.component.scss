@@ -40,9 +40,8 @@ section {
 }
 
 .headline-container {
-  position: relative;
   @include center-all-flexbox();
-  width: 100%;
+
   h2 {
     text-align: center !important;
   }
@@ -51,7 +50,7 @@ section {
 .blue-line-right {
   position: absolute;
   right: 0;
-  width: 20%;
+  width: $spacing-to-sides;
   height: 3px;
   background-color: $color-bright-blue;
 }
