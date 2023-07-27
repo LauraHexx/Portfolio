@@ -1,0 +1,23 @@
+@import "src/assets/styles/mixins-and-variables.scss";
+
+section {
+  background-color: $color-main;
+}
+
+.icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 125px;
+  img {
+    width: 88px;
+    height: 100px;
+  }
+}
+
+.single-skill {
+  @include column-flex-box();
+  img {
+    width: 88px;
+    height: 100px;
+  }
+}

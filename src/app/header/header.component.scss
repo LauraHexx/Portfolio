@@ -1,14 +1,14 @@
 @import "src/assets/styles/mixins-and-variables.scss";
 
 header {
-  @include centerAlignItems();
+  @include align-center-flexbox();
   justify-content: space-between;
   background-color: $color-main;
   padding: 37px $spacing-to-sides;
 }
 
 nav {
-  @include centerJustifyContent();
+  @include justifyContent-center-flexbox();
   align-items: flex-start;
   gap: 29px;
   a {

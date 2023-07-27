@@ -14,18 +14,23 @@ $spacing-between-sections: 150px;
 
 //MIXINS
 
-@mixin centerAll() {
+@mixin center-all-flexbox() {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-@mixin centerJustifyContent() {
+@mixin justifyContent-center-flexbox() {
   display: flex;
   justify-content: center;
 }
 
-@mixin centerAlignItems() {
+@mixin align-center-flexbox() {
   display: flex;
   align-items: center;
+}
+
+@mixin column-flex-box() {
+  display: flex;
+  flex-direction: column;
 }

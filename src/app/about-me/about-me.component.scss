@@ -1,8 +1,7 @@
 @import "src/assets/styles/mixins-and-variables.scss";
 
 section {
-  display: flex;
-  flex-direction: column;
+  @include column-flex-box();
   background-color: $color-main;
   padding: $spacing-top-sections $spacing-to-sides $spacing-bottom-sections;
   margin-top: $spacing-between-sections;
@@ -16,7 +15,7 @@ aside {
 }
 
 .icons-and-email {
-  @include centerAlignItems();
+  @include align-center-flexbox();
   gap: 42px;
   a {
     font-size: 23px;
@@ -33,7 +32,7 @@ aside {
 }
 
 .icons-container {
-  @include centerAlignItems();
+  @include align-center-flexbox();
   gap: 42px;
   margin-left: 42px;
   img {
@@ -48,7 +47,7 @@ aside {
 }
 
 .scroll-down-container {
-  @include centerAlignItems();
+  @include align-center-flexbox();
   flex-direction: column;
   gap: 3px;
   cursor: pointer;
@@ -74,8 +73,7 @@ main {
 //MAIN-LEFT
 
 .text-section {
-  display: flex;
-  flex-direction: column;
+  @include column-flex-box();
   align-items: flex-start;
   gap: 35px;
   width: 60%;
@@ -86,26 +84,25 @@ main {
 }
 
 .icons-and-text-container {
-  display: flex;
-  flex-direction: column;
+  @include column-flex-box();
   gap: 35px;
   padding-left: 35px;
 }
 
 .icon-with-img-container {
-  @include centerAll();
+  @include center-all-flexbox();
   gap: 35px;
 }
 
 //MAIN-RIGHT
 
 .img-section {
-  @include centerAlignItems();
+  @include align-center-flexbox();
   justify-content: space-between;
 }
 
 .profile-img-small-container {
-  @include centerAll();
+  @include center-all-flexbox();
   border-radius: 100%;
   img {
     width: 509px;
