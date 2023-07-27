@@ -24,7 +24,7 @@ aside {
   }
 }
 
-.blue-line {
+.blue-line-left {
   position: absolute;
   left: 0;
   width: $spacing-to-sides;
@@ -64,19 +64,62 @@ aside {
   }
 }
 
-//MAIN
-
 main {
-  z-index: 3;
+  display: flex;
+  justify-content: space-between;
   margin-top: $spacing-between-sections;
+  z-index: 3;
 }
 
-.about-me-text-container {
+//MAIN-LEFT
+
+.text-section {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 35px;
+  width: 60%;
 }
 
 .introduction {
   font-size: 16px;
+}
+
+.icons-and-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  padding-left: 35px;
+}
+
+.icon-with-img-container {
+  @include centerAll();
+  gap: 35px;
+}
+
+//MAIN-RIGHT
+
+.img-section {
+  @include centerAlignItems();
+  justify-content: space-between;
+}
+
+.profile-img-small-container {
+  @include centerAll();
+  border-radius: 100%;
+  img {
+    width: 509px;
+    height: 509px;
+    border-radius: 100%;
+    object-fit: cover;
+    border: solid 4px $color-bright-blue;
+  }
+}
+
+.blue-line-right {
+  position: absolute;
+  right: 0;
+  width: $spacing-to-sides;
+  height: 3px;
+  background-color: $color-bright-blue;
 }

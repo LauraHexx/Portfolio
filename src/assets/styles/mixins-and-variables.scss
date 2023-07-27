@@ -12,6 +12,8 @@ $spacing-top-sections: 50px;
 $spacing-bottom-sections: 50px;
 $spacing-between-sections: 150px;
 
+//MIXINS
+
 @mixin centerAll() {
   display: flex;
   justify-content: center;
