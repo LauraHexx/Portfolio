@@ -1,13 +1,18 @@
 @import "src/assets/styles/mixins-and-variables.scss";
 
 section {
+  @include align-center-flexbox();
+  justify-content: space-between;
   background-color: $color-main;
+  padding: $spacing-top-sections $spacing-to-sides $spacing-bottom-sections;
+  padding-top: $spacing-between-sections;
 }
 
 .icons-container {
   display: flex;
   flex-wrap: wrap;
   gap: 125px;
+  width: 60%;
   img {
     width: 88px;
     height: 100px;
@@ -16,8 +21,54 @@ section {
 
 .single-skill {
   @include column-flex-box();
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   img {
     width: 88px;
     height: 100px;
+  }
+}
+
+.my-skills-text-container {
+  @include column-flex-box();
+  gap: 35px;
+
+  span {
+    text-align: center;
+  }
+}
+
+.headline-container {
+  position: relative;
+  @include center-all-flexbox();
+  width: 100%;
+  h2 {
+    text-align: center !important;
+  }
+}
+
+.blue-line-right {
+  position: absolute;
+  right: 0;
+  width: 20%;
+  height: 3px;
+  background-color: $color-bright-blue;
+}
+
+.btn-container {
+  @include center-all-flexbox();
+  gap: 15px;
+  button {
+    font-size: 23px;
+    color: $color-white;
+    background-color: $color-bright-blue;
+    border-radius: 10px;
+    transition: all 225ms ease-in-out;
+    z-index: 5;
+    &:hover {
+      padding: 20px 40px;
+      background-color: $color-middle-blue;
+    }
   }
 }
