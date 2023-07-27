@@ -54,21 +54,19 @@ section {
   @include centerAll();
   margin-top: 30px;
   height: 58px;
+  z-index: 3;
+}
 
-  button {
-    font-size: 23px;
-    color: $color-white;
-    background-color: $color-bright-blue;
-    border-radius: 10px;
-    border: none;
-    padding: $spacing-btn;
-    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-    transition: all 225ms ease-in-out;
-    &:hover {
-      padding: 20px 40px;
-      background-color: $color-middle-blue;
-    }
+button {
+  font-size: 23px;
+  color: $color-white;
+  background-color: $color-bright-blue;
+  border-radius: 10px;
+  transition: all 225ms ease-in-out;
+  z-index: 5;
+  &:hover {
+    padding: 20px 40px;
+    background-color: $color-middle-blue;
   }
 }
 

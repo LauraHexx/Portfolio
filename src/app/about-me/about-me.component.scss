@@ -1,23 +1,27 @@
 @import "src/assets/styles/mixins-and-variables.scss";
 
 section {
-  position: relative;
-  @include centerAlignItems();
-  justify-content: space-between;
-  gap: 42px;
+  display: flex;
+  flex-direction: column;
   background-color: $color-main;
   padding: $spacing-top-sections $spacing-to-sides $spacing-bottom-sections;
   margin-top: 150px;
+}
+
+aside {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
   z-index: 3;
-  a {
-    font-size: 23px;
-    color: $color-white;
-  }
 }
 
 .icons-and-email {
   @include centerAlignItems();
   gap: 42px;
+  a {
+    font-size: 23px;
+    color: $color-white;
+  }
 }
 
 .blue-line {
@@ -25,7 +29,7 @@ section {
   left: 0;
   width: $spacing-to-sides;
   height: 3px;
-  background-color: $color-bright-blue;
+  background-color: $color-middle-blue;
 }
 
 .icons-container {
@@ -40,5 +44,22 @@ section {
       width: 40px;
       height: 40px;
     }
+  }
+}
+
+.scroll-down-container {
+  @include centerAlignItems();
+  flex-direction: column;
+  gap: 3px;
+  cursor: pointer;
+  div {
+    transform: rotate(90deg);
+    color: $color-white;
+    font-size: 23px;
+  }
+  img {
+    display: block;
+    width: 24px;
+    height: 24px;
   }
 }
