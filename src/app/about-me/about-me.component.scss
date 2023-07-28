@@ -16,10 +16,10 @@ aside {
   @include align-center-flexbox();
   justify-content: space-between;
   gap: 42px;
-  width: 500px;
   a {
     font-size: 23px;
     color: $color-white;
+    @include center-all-flexbox();
   }
 }
 
@@ -39,10 +39,9 @@ aside {
   img {
     width: 30px;
     height: 30px;
-    transition: all 225ms ease-in-out;
+    transition: all 125ms ease-in-out;
     &:hover {
-      width: 40px;
-      height: 40px;
+      transform: translateY(-5px);
       cursor: pointer;
     }
   }
