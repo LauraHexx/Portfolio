@@ -39,6 +39,7 @@ section {
 
 .headline-container {
   @include center-all-flexbox();
+  position: relative;
   h2 {
     text-align: center !important;
   }

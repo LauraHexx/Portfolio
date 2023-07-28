@@ -1,9 +1,15 @@
 @import "src/assets/styles/mixins-and-variables.scss";
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
   @include align-center-flexbox();
   justify-content: space-between;
   padding: 37px $spacing-to-sides;
+  background-color: $color-main;
 }
 
 nav {
