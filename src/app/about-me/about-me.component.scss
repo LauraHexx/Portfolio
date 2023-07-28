@@ -126,3 +126,15 @@ main {
   height: 3px;
   background-color: $color-bright-blue;
 }
+
+.bg-form-about-me-container {
+  position: absolute;
+  top: 150px;
+  right: 0;
+  object-fit: cover;
+  border-radius: 100%;
+  img {
+    width: 572px;
+    height: 900px;
+  }
+}
