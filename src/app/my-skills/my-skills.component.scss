@@ -10,7 +10,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 125px;
-  width: 60%;
+  width: 55%;
   img {
     width: 88px;
     height: 100px;
@@ -55,6 +55,7 @@ section {
 .btn-container {
   @include center-all-flexbox();
   gap: 15px;
+  height: 58px;
   button {
     font-size: 23px;
     color: $color-white;
