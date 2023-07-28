@@ -3,6 +3,7 @@
 section {
   @include column-flex-box();
   @include general-layout();
+  position: relative;
 }
 
 aside {
@@ -48,16 +49,20 @@ aside {
 }
 
 .scroll-down-container {
+  position: absolute;
+  right: calc($spacing-to-sides - 71px);
+  top: calc($spacing-bottom-sections - 47px);
   @include align-center-flexbox();
-  flex-direction: column;
-  gap: 3px;
+  gap: 10px;
+  z-index: 3;
+  transform: rotate(90deg);
   cursor: pointer;
-  div {
-    transform: rotate(90deg);
+  span {
     color: $color-white;
     font-size: 23px;
   }
   img {
+    transform: rotate(-90deg);
     display: block;
     width: 24px;
     height: 24px;
