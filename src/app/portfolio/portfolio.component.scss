@@ -1,5 +1,26 @@
 @import "src/assets/styles/mixins-and-variables.scss";
 
 section {
-  @include general-layout();
+  padding: $spacing-top-sections 0 $spacing-bottom-sections 0;
+  margin-top: $spacing-between-sections;
+}
+
+.headline-container {
+  position: relative;
+  @include center-all-flexbox();
+  gap: 32px;
+  width: 100%;
+}
+
+.blue-line-left {
+  width: 109px;
+  height: 3px;
+  background-color: $color-middle-blue;
+}
+
+.blue-line-right {
+  position: relative;
+  width: auto;
+  height: 3px;
+  background-color: $color-middle-blue;
 }
