@@ -10,7 +10,7 @@ $spacing-btn: 15px 30px;
 $spacing-to-sides: 20%;
 $spacing-top-sections: 50px;
 $spacing-bottom-sections: 50px;
-$spacing-between-sections: 150px;
+$spacing-between-sections: 200px;
 
 @mixin general-layout() {
   padding: $spacing-top-sections $spacing-to-sides $spacing-bottom-sections;

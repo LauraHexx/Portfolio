@@ -50,7 +50,7 @@ aside {
 
 .scroll-down-container {
   position: absolute;
-  right: calc($spacing-to-sides - 71px);
+  right: calc($spacing-to-sides - 75px);
   top: calc($spacing-bottom-sections - 47px);
   @include align-center-flexbox();
   gap: 10px;
