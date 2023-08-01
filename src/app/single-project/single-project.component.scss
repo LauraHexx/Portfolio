@@ -1,0 +1,18 @@
+@import "src/assets/styles/mixins-and-variables.scss";
+
+.single-project {
+  @include center-all-flexbox();
+  img {
+    width: 620px;
+    height: 339px;
+  }
+}
+
+.details-project {
+  @include column-flex-box();
+  gap: 15px;
+  h3 {
+    font-size: 32px;
+    color: $color-middle-blue;
+  }
+}

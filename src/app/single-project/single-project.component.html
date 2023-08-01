@@ -1,11 +1,13 @@
-<div class="single-projekt">
+<div class="single-project">
   <img
     src="./assets/img/projects/{{ img }}"
-    alt="computer with the join-projekt on the screen"
+    alt="computer with the project image on the screen"
   />
   <div class="details-project">
     <h3>{{ title }}</h3>
-    <span class="skills-of-project">{{ skills }} </span>
+    <div class="skills-of-project">
+      <span *ngFor="let skill of skills">{{ skill }} |</span>
+    </div>
     <div class="description-project">
       {{ description }}
     </div>
