@@ -42,3 +42,6 @@ section {
   text-align: center;
   font-size: 16px;
 }
+main {
+  padding: $spacing-top-sections $spacing-to-sides $spacing-bottom-sections;
+}

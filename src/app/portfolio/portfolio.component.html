@@ -7,7 +7,13 @@
   <span class="description-container">
     This page is a sample of my work - please feel free to try them out.
   </span>
-  <main class="projekts">
-    <app-single-project></app-single-project>
+  <main class="projects">
+    <app-single-project
+      *ngFor="let project of this.projects; let i = index"
+      [title]="project.title"
+      [skills]="project.skills"
+      [description]="project.description"
+      [img]="project.img"
+    ></app-single-project>
   </main>
 </section>
