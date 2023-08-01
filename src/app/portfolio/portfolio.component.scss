@@ -13,14 +13,32 @@ section {
 }
 
 .blue-line-left {
+  /*
   width: 109px;
   height: 3px;
   background-color: $color-middle-blue;
+   */
 }
 
 .blue-line-right {
-  position: relative;
-  width: auto;
+  /*
+  position: absolute;
+  right: 0;
+  width: 42%;
   height: 3px;
   background-color: $color-middle-blue;
+  */
+}
+
+.text-container {
+  @include column-flex-box();
+  align-items: center;
+  gap: 35px;
+}
+
+.description-container {
+  display: block;
+  color: $color-white;
+  text-align: center;
+  font-size: 16px;
 }
