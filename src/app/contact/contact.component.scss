@@ -1,0 +1,97 @@
+@import "src/assets/styles/mixins-and-variables.scss";
+
+section {
+  @include general-layout();
+}
+
+.headline-container {
+  @include align-center-flexbox();
+  justify-content: flex-start;
+  gap: 35px;
+}
+
+.blue-line-left {
+  width: 7%;
+  height: 3px;
+  background-color: $color-middle-blue;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 45px;
+}
+
+.text-container {
+  @include column-flex-box();
+  gap: 35px;
+  width: 45%;
+}
+
+.problem-solve-text {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.contact-me-text {
+  font-size: 16px;
+}
+
+.need-developer-text {
+  font-size: 16px;
+}
+
+form {
+  @include column-flex-box();
+  gap: 35px;
+  width: 50%;
+  input {
+    padding: 15px 25px;
+    border-radius: 10px;
+    border: 1px solid $color-middle-blue;
+    background: transparent;
+    font-size: 16px;
+    color: $color-white;
+    width: 100%;
+    box-sizing: border-box;
+    &:hover {
+      border-color: $color-bright-blue;
+      cursor: pointer;
+    }
+    &:focus {
+      border-color: #e61c40 !important;
+    }
+    &::placeholder {
+      font-size: 16px;
+      color: $color-white;
+    }
+  }
+}
+
+.input-container {
+  @include center-all-flexbox();
+  position: relative;
+  img {
+    position: absolute;
+    right: 25px;
+  }
+}
+
+.btn-container {
+  @include center-all-flexbox();
+  height: 58px;
+  z-index: 3;
+}
+
+button {
+  font-size: 23px;
+  color: $color-white;
+  background-color: $color-bright-blue;
+  border-radius: 10px;
+  transition: all 225ms ease-in-out;
+  z-index: 5;
+  &:hover {
+    padding: 20px 40px;
+    background-color: $color-middle-blue;
+  }
+}
