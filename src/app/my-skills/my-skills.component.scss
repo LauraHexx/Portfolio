@@ -11,10 +11,6 @@ section {
   flex-wrap: wrap;
   gap: 125px;
   width: 55%;
-  img {
-    width: 88px;
-    height: 100px;
-  }
 }
 
 .single-skill {
@@ -23,8 +19,11 @@ section {
   align-items: center;
   gap: 10px;
   img {
-    width: 88px;
-    height: 100px;
+    object-fit: cover;
+    transition: all 125ms ease-in-out;
+    &:hover {
+      transform: translateY(-10px);
+    }
   }
 }
 
