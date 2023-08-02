@@ -1,11 +1,8 @@
 @import "src/assets/styles/mixins-and-variables.scss";
 
-.single-project {
-  @include center-all-flexbox();
-  img {
-    width: 620px;
-    height: 339px;
-  }
+.details-and-btns-container {
+  @include column-flex-box();
+  gap: 35px;
 }
 
 .details-project {
@@ -14,5 +11,61 @@
   h3 {
     font-size: 32px;
     color: $color-middle-blue;
+  }
+}
+
+.skills-of-project {
+  span {
+    font-size: 23px;
+    color: $color-bright-blue;
+  }
+}
+
+.description-project {
+  font-size: 16px;
+}
+
+.btns-container {
+  @include align-center-flexbox();
+  gap: 85px;
+  button {
+    font-size: 23px;
+    color: $color-white;
+    border-radius: 10px;
+    transition: all 225ms ease-in-out;
+    &:hover {
+      background-color: $color-bright-blue;
+    }
+  }
+}
+
+.btn-live {
+  background-color: $color-middle-blue;
+}
+
+.btn-github {
+  background-color: transparent;
+  border-color: $color-bright-blue;
+  border: 1px solid $color-bright-blue;
+}
+
+.single-project {
+  @include align-center-flexbox();
+  gap: 250px;
+  width: 100%;
+  img {
+    width: 515px;
+    height: 510px;
+  }
+}
+
+.place-project-right {
+  justify-content: flex-end;
+}
+
+.place-project-left {
+  justify-content: flex-start;
+  img {
+    order: 2;
   }
 }

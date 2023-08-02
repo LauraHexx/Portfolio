@@ -10,4 +10,5 @@ export class SingleProjectComponent {
   @Input() skills: Array<string>;
   @Input() description: string;
   @Input() img: string;
+  @Input() index: number;
 }

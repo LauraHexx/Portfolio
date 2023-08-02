@@ -1,19 +1,27 @@
-<div class="single-project">
+<div
+  [ngClass]="{
+    'place-project-left': index % 2 === 1,
+    'place-project-right': index % 2 === 0
+  }"
+  class="single-project"
+>
   <img
     src="./assets/img/projects/{{ img }}"
     alt="computer with the project image on the screen"
   />
-  <div class="details-project">
-    <h3>{{ title }}</h3>
-    <div class="skills-of-project">
-      <span *ngFor="let skill of skills">{{ skill }} |</span>
+  <div class="details-and-btns-container">
+    <div class="details-project">
+      <h3>{{ title }}</h3>
+      <div class="skills-of-project">
+        <span *ngFor="let skill of skills">{{ skill }} | </span>
+      </div>
+      <span class="description-project">
+        {{ description }}
+      </span>
     </div>
-    <div class="description-project">
-      {{ description }}
+    <div class="btns-container">
+      <a href=""> <button class="btn-live">Live test</button></a>
+      <a href=""><button class="btn-github">Github</button></a>
     </div>
-  </div>
-  <div class="btns-container">
-    <button>Live test</button>
-    <button>Github</button>
   </div>
 </div>
