@@ -3,6 +3,7 @@
 .details-and-btns-container {
   @include column-flex-box();
   gap: 35px;
+  width: 50%;
 }
 
 .details-project {
@@ -23,6 +24,7 @@
 
 .description-project {
   font-size: 16px;
+  text-align: justify;
 }
 
 .btns-container {
@@ -54,8 +56,9 @@
   gap: 250px;
   width: 100%;
   img {
-    width: 515px;
-    height: 510px;
+    width: 550px;
+    height: 560px;
+    object-fit: cover;
   }
 }
 
