@@ -1,7 +1,7 @@
 @import "src/assets/styles/mixins-and-variables.scss";
 
 footer {
-  padding: 110px $spacing-between-sections;
+  padding: 110px $spacing-to-sides;
   @include align-center-flexbox();
   justify-content: space-between;
   border-top: 4px solid $color-bright-blue;

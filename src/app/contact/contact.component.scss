@@ -1,9 +1,10 @@
 @import "src/assets/styles/mixins-and-variables.scss";
 
 section {
-  @include general-layout();
+  padding: $spacing-top-sections $spacing-to-sides $spacing-bottom-sections;
   @include column-flex-box();
   gap: 60px;
+  position: relative;
 }
 
 .headline-container {
@@ -101,4 +102,12 @@ button {
   display: flex;
   justify-content: flex-end;
   cursor: pointer;
+}
+
+.bg-form {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 545px;
+  height: 600px;
 }
