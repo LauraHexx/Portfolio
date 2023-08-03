@@ -28,5 +28,12 @@ export class PortfolioComponent {
         'Welcome to my portfolio page! I am excited to share with you some of the projects I have worked on using Angular, TypeScript, HTML, and CSS',
       img: 'join.png',
     },
+    {
+      title: 'Portfolio',
+      skills: ['Angular ', 'Typescript', 'HTML', 'CSS'],
+      description:
+        'Welcome to my portfolio page! I am excited to share with you some of the projects I have worked on using Angular, TypeScript, HTML, and CSS',
+      img: 'join.png',
+    },
   ];
 }

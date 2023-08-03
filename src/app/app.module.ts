@@ -12,9 +12,12 @@ import { SingleProjectComponent } from './single-project/single-project.componen
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { SocialMediaIconsComponent } from './social-media-icons/social-media-icons.component';
+import { ImprintComponent } from './imprint/imprint.component';
+import { MainPageComponent } from './main-page/main-page.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, IAmComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, SingleProjectComponent, ContactComponent, FooterComponent, SocialMediaIconsComponent],
+  declarations: [AppComponent, HeaderComponent, IAmComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, SingleProjectComponent, ContactComponent, FooterComponent, SocialMediaIconsComponent, ImprintComponent, MainPageComponent, PrivacyPolicyComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

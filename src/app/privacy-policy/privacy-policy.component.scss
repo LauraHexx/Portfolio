@@ -1,0 +1,14 @@
+@import "src/assets/styles/mixins-and-variables.scss";
+
+section {
+  padding: 30px $spacing-to-sides;
+  margin-top: 75px;
+}
+
+* {
+  color: $color-white;
+}
+
+a {
+  text-decoration: underline;
+}

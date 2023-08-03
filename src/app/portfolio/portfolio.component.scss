@@ -3,6 +3,7 @@
 section {
   padding: $spacing-top-sections 0 $spacing-bottom-sections 0;
   margin-top: $spacing-between-sections;
+  position: relative;
 }
 
 .headline-container {
@@ -48,4 +49,21 @@ main {
   padding: $spacing-top-sections $spacing-to-sides 0;
   @include column-flex-box();
   gap: 45px;
+}
+
+.bg-form-1 {
+  position: absolute;
+  top: 950px;
+  width: 757px;
+  height: 908px;
+  z-index: -1;
+}
+
+.bg-form-2 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 757px;
+  height: 908px;
+  z-index: -1;
 }
