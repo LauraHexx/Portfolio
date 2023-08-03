@@ -5,6 +5,10 @@
   src: url("./assets/fonts/Poppins/Poppins-Light.ttf");
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Poppins;
@@ -33,4 +37,9 @@ h3 {
 
 h2 {
   font-size: 90px;
+}
+
+::-webkit-scrollbar {
+  width: 10px; /* Breite der Scrollbar */
+  color: $color-bright-blue;
 }

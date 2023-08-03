@@ -1,5 +1,10 @@
 @import "src/assets/styles/mixins-and-variables.scss";
 
+#scroll-to-top {
+  position: absolute;
+  top: 0;
+}
+
 header {
   position: fixed;
   top: 0;
