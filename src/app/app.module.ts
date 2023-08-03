@@ -15,9 +15,10 @@ import { SocialMediaIconsComponent } from './social-media-icons/social-media-ico
 import { ImprintComponent } from './imprint/imprint.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { LogoComponent } from './logo/logo.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, IAmComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, SingleProjectComponent, ContactComponent, FooterComponent, SocialMediaIconsComponent, ImprintComponent, MainPageComponent, PrivacyPolicyComponent],
+  declarations: [AppComponent, HeaderComponent, IAmComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, SingleProjectComponent, ContactComponent, FooterComponent, SocialMediaIconsComponent, ImprintComponent, MainPageComponent, PrivacyPolicyComponent, LogoComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
