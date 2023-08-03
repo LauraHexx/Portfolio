@@ -11,6 +11,7 @@ aside {
   justify-content: space-between;
   align-items: flex-end;
   z-index: 3;
+  margin-left: 42px;
 }
 
 .icons-and-email {
@@ -30,22 +31,6 @@ aside {
   width: $spacing-to-sides;
   height: 3px;
   background-color: $color-middle-blue;
-}
-
-.icons-container {
-  @include align-center-flexbox();
-  gap: 42px;
-  margin-left: 42px;
-  height: 50px;
-  img {
-    width: 30px;
-    height: 30px;
-    transition: all 125ms ease-in-out;
-    &:hover {
-      transform: translateY(-5px);
-      cursor: pointer;
-    }
-  }
 }
 
 .scroll-down-container {

@@ -2,6 +2,8 @@
 
 section {
   @include general-layout();
+  @include column-flex-box();
+  gap: 60px;
 }
 
 .headline-container {
@@ -19,7 +21,6 @@ section {
 .main-container {
   display: flex;
   justify-content: space-between;
-  margin-top: 45px;
 }
 
 .text-container {
@@ -94,4 +95,10 @@ button {
     padding: 20px 40px;
     background-color: $color-middle-blue;
   }
+}
+
+.go-up-container {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
 }

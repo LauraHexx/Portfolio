@@ -4,8 +4,8 @@ section {
   position: relative;
   @include align-center-flexbox();
   justify-content: space-between;
-  @include general-layout();
-  margin: 0 !important;
+  padding: $spacing-top-sections $spacing-to-sides $spacing-bottom-sections;
+  margin-top: 70px;
 }
 
 .bg-profile-img-big {

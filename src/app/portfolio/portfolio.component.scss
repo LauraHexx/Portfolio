@@ -45,7 +45,7 @@ section {
 }
 
 main {
-  padding: $spacing-top-sections $spacing-to-sides $spacing-bottom-sections;
+  padding: $spacing-top-sections $spacing-to-sides 0;
   @include column-flex-box();
   gap: 45px;
 }
