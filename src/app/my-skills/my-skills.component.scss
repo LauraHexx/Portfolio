@@ -4,6 +4,7 @@ section {
   @include align-center-flexbox();
   justify-content: space-between;
   @include general-layout();
+  position: relative;
 }
 
 .icons-container {
@@ -68,4 +69,12 @@ section {
       background-color: $color-middle-blue;
     }
   }
+}
+
+.bg-form {
+  position: absolute;
+  left: 0;
+  bottom: -244px;
+  width: 656px;
+  height: 793px;
 }
