@@ -49,20 +49,21 @@ form {
   width: 50%;
   input {
     padding: 15px 25px;
-    border-radius: 10px;
-    border: 1px solid $color-middle-blue;
     background: transparent;
     font-size: 16px;
     color: $color-white;
     width: 100%;
     box-sizing: border-box;
+    border: none;
+    outline: none;
+    &:focus:invalid {
+      border-color: #e61c40 !important;
+    }
     &:hover {
       border-color: $color-bright-blue;
       cursor: pointer;
     }
-    &:focus {
-      border-color: #e61c40 !important;
-    }
+
     &::placeholder {
       font-size: 16px;
       color: $color-white;
@@ -73,6 +74,8 @@ form {
 .input-container {
   @include center-all-flexbox();
   position: relative;
+  border-radius: 10px;
+  border: 1px solid $color-middle-blue;
   img {
     position: absolute;
     right: 25px;

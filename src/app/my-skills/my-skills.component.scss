@@ -11,7 +11,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 125px;
-  width: 55%;
+  width: 45%;
 }
 
 .single-skill {
@@ -31,7 +31,7 @@ section {
 .my-skills-text-container {
   @include column-flex-box();
   gap: 35px;
-
+  width: 45%;
   span {
     text-align: center;
   }
@@ -48,7 +48,7 @@ section {
 .blue-line-right {
   position: absolute;
   right: 0;
-  width: $spacing-to-sides;
+  width: 160px;
   height: 3px;
   background-color: $color-bright-blue;
 }

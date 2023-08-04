@@ -57,9 +57,19 @@
       </div>
     </form>
   </div>
+
   <a href="#scroll-to-top" class="go-up-container">
-    <img src="./assets/img/go-up-icon.png" alt="" />
+    <img
+      src="{{
+        isHovered
+          ? './assets/img/go-up-icon-blue.png'
+          : './assets/img/go-up-icon.png'
+      }}"
+      (mouseover)="onMouseOver()"
+      (mouseout)="onMouseOut()"
+    />
   </a>
+
   <img
     class="bg-form"
     src="./assets/img/background/contacts-form.png"
