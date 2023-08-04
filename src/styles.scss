@@ -1,10 +1,5 @@
 @import "src/assets/styles/mixins-and-variables.scss";
 
-@font-face {
-  font-family: Poppins;
-  src: url("./assets/fonts/Poppins/Poppins-Light.ttf");
-}
-
 * {
   scroll-behavior: smooth;
 }
@@ -39,7 +34,15 @@ h2 {
   font-size: 90px;
 }
 
-::-webkit-scrollbar {
-  width: 10px; /* Breite der Scrollbar */
-  color: $color-bright-blue;
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 2px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #00bee8;
+  border-radius: 2px;
 }
