@@ -23,6 +23,9 @@ aside {
     font-size: 23px;
     color: $color-white;
     @include center-all-flexbox();
+    &:hover {
+      color: $color-bright-blue;
+    }
   }
 }
 

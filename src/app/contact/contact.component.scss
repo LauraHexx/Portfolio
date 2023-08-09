@@ -47,7 +47,8 @@ form {
   @include column-flex-box();
   gap: 35px;
   width: 50%;
-  input {
+  input,
+  textarea {
     padding: 15px 25px;
     background: transparent;
     font-size: 16px;

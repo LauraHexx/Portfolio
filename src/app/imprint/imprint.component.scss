@@ -1,6 +1,7 @@
 @import "src/assets/styles/mixins-and-variables.scss";
 
 section {
+  @include general-layout();
 }
 
 * {

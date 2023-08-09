@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,8 +21,24 @@ import { LogoComponent } from './logo/logo.component';
 import { GreetingComponent } from './greeting/greeting.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, IAmComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, SingleProjectComponent, ContactComponent, FooterComponent, SocialMediaIconsComponent, ImprintComponent, MainPageComponent, PrivacyPolicyComponent, LogoComponent, GreetingComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    IAmComponent,
+    AboutMeComponent,
+    MySkillsComponent,
+    PortfolioComponent,
+    SingleProjectComponent,
+    ContactComponent,
+    FooterComponent,
+    SocialMediaIconsComponent,
+    ImprintComponent,
+    MainPageComponent,
+    PrivacyPolicyComponent,
+    LogoComponent,
+    GreetingComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
