@@ -1,11 +1,10 @@
 @import "src/assets/styles/mixins-and-variables.scss";
 
 section {
-  position: relative;
+  @include general-layout();
   @include align-center-flexbox();
   justify-content: space-between;
-  padding: $spacing-top-sections $spacing-to-sides $spacing-bottom-sections;
-  margin-top: 70px;
+  position: relative;
 }
 
 .bg-profile-img-big {
@@ -68,10 +67,10 @@ button {
 
 .bg-gradient {
   position: absolute;
-  top: 512px;
-  width: 104vw;
+  top: 639px;
+  width: 108vw;
   left: -18px;
   transform: rotate(3deg);
-  height: 702px;
+  height: 623px;
   z-index: 2;
 }

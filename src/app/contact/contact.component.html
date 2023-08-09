@@ -21,35 +21,43 @@
     <form action="" method="post">
       <div class="single-input-field">
         <div class="input-container">
-          <input type="text" placeholder="Your name" />
+          <input required type="text" placeholder="Your name" />
           <img
+            class="d-none"
             src="./assets/img/input-error.png"
             alt="icon which shows if form is filled out correct"
           />
         </div>
-        <div class="input-error"></div>
+        <div class="input-error">Your name is required</div>
       </div>
 
       <div class="single-input-field">
         <div class="input-container">
-          <input type="text" placeholder="Your email " />
+          <input required type="email" placeholder="Your email " />
           <img
+            class="d-none"
             src="./assets/img/input-error.png"
             alt="icon which shows if form is filled out correct"
           />
         </div>
-        <div class="input-error"></div>
+        <div class="input-error">Your email is required</div>
       </div>
 
       <div class="single-input-field">
         <div class="input-container">
-          <input type="text" placeholder="Your message " />
+          <input
+            required
+            type="text"
+            placeholder="Your message "
+            style="height: 282px"
+          />
           <img
+            class="d-none"
             src="./assets/img/input-error.png"
             alt="icon which shows if form is filled out correct"
           />
         </div>
-        <div class="input-error"></div>
+        <div class="input-error">Your message is empty</div>
       </div>
 
       <div class="btn-container">

@@ -16,9 +16,10 @@ import { ImprintComponent } from './imprint/imprint.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { LogoComponent } from './logo/logo.component';
+import { GreetingComponent } from './greeting/greeting.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, IAmComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, SingleProjectComponent, ContactComponent, FooterComponent, SocialMediaIconsComponent, ImprintComponent, MainPageComponent, PrivacyPolicyComponent, LogoComponent],
+  declarations: [AppComponent, HeaderComponent, IAmComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, SingleProjectComponent, ContactComponent, FooterComponent, SocialMediaIconsComponent, ImprintComponent, MainPageComponent, PrivacyPolicyComponent, LogoComponent, GreetingComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

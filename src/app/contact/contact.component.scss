@@ -1,7 +1,7 @@
 @import "src/assets/styles/mixins-and-variables.scss";
 
 section {
-  padding: $spacing-top-sections $spacing-to-sides $spacing-bottom-sections;
+  @include general-layout();
   @include column-flex-box();
   gap: 60px;
   position: relative;
@@ -54,10 +54,11 @@ form {
     color: $color-white;
     width: 100%;
     box-sizing: border-box;
-    border: none;
+    border-radius: 10px;
+    border: 1px solid $color-middle-blue;
     outline: none;
-    &:focus:invalid {
-      border-color: #e61c40 !important;
+    &:focus {
+      // border-color: #e61c40 !important;
     }
     &:hover {
       border-color: $color-bright-blue;
@@ -69,17 +70,20 @@ form {
       color: $color-white;
     }
   }
+  img {
+    position: absolute;
+    right: 25px;
+  }
 }
 
 .input-container {
   @include center-all-flexbox();
   position: relative;
-  border-radius: 10px;
-  border: 1px solid $color-middle-blue;
-  img {
-    position: absolute;
-    right: 25px;
-  }
+}
+
+.input-error {
+  color: #e61c40;
+  font-size: 13px;
 }
 
 .btn-container {

@@ -1,6 +1,6 @@
 @import "src/assets/styles/mixins-and-variables.scss";
 
-* {
+html {
   scroll-behavior: smooth;
 }
 
@@ -41,4 +41,8 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   background: #00bee8;
   border-radius: 2px;
+}
+
+.d-none {
+  display: none;
 }

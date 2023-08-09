@@ -3,7 +3,7 @@
 .details-and-btns-container {
   @include column-flex-box();
   gap: 35px;
-  width: 50%;
+  width: 40%;
 }
 
 .details-project {
@@ -53,11 +53,11 @@
 
 .single-project {
   @include align-center-flexbox();
-  gap: 250px;
+  gap: 110px;
   width: 100%;
   img {
-    width: 550px;
-    height: 560px;
+    width: 420px;
+    height: 460px;
     object-fit: cover;
   }
 }

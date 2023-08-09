@@ -1,9 +1,10 @@
 @import "src/assets/styles/mixins-and-variables.scss";
 
 section {
-  @include column-flex-box();
   @include general-layout();
+  @include column-flex-box();
   position: relative;
+  gap: 60px;
 }
 
 aside {
@@ -36,7 +37,7 @@ aside {
 .scroll-down-container {
   position: absolute;
   right: calc($spacing-to-sides - 75px);
-  top: calc($spacing-bottom-sections - 47px);
+  top: 88px;
   @include align-center-flexbox();
   gap: 10px;
   z-index: 3;

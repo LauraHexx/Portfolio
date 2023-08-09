@@ -1,9 +1,9 @@
 @import "src/assets/styles/mixins-and-variables.scss";
 
 section {
+  @include general-layout();
   @include align-center-flexbox();
   justify-content: space-between;
-  @include general-layout();
   position: relative;
 }
 
