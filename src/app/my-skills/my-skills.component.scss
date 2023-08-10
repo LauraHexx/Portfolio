@@ -50,7 +50,7 @@ section {
   right: 0;
   width: 160px;
   height: 3px;
-  background-color: $color-bright-blue;
+  background-color: var(--color-bright-blue);
 }
 
 .btn-container {
@@ -59,14 +59,14 @@ section {
   height: 58px;
   button {
     font-size: 23px;
-    color: $color-white;
-    background-color: $color-bright-blue;
+    color: var(--color-white);
+    background-color: var(--color-bright-blue);
     border-radius: 10px;
     transition: all 225ms ease-in-out;
     z-index: 5;
     &:hover {
       padding: 20px 40px;
-      background-color: $color-middle-blue;
+      background-color: var(--color-middle-blue);
     }
   }
 }

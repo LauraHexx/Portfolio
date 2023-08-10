@@ -21,7 +21,7 @@ export class PortfolioComponent {
       skills: ['JavaScript', 'HTML', 'CSS'],
       description:
         'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and bottles to fight against the killer chicken.',
-      img: 'join.png',
+      img: 'el-pollo-loco.png',
       linkLiveTest:
         'https://laura-hesidenz.developerakademie.net/El-Pollo-Loco/',
       linkGithub: 'https://github.com/LauraHexx/El-Pollo-Loco',
@@ -31,7 +31,7 @@ export class PortfolioComponent {
       skills: ['Angular ', 'Typescript', 'HTML', 'CSS'],
       description:
         'Welcome to my portfolio page! I am excited to share with you some of the projects I have worked on using Angular, TypeScript, HTML, and CSS',
-      img: 'join.png',
+      img: 'portfolio.png',
       linkLiveTest: '',
       linkGithub: '',
     },

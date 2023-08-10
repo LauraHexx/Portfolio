@@ -5,7 +5,7 @@ section {
 }
 
 * {
-  color: $color-white;
+  color: var(--color-white);
 }
 
 a {

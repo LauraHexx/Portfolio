@@ -16,7 +16,7 @@ section {
 .blue-line-left {
   width: 7%;
   height: 3px;
-  background-color: $color-middle-blue;
+  background-color: var(--color-middle-blue);
 }
 
 .main-container {
@@ -52,23 +52,23 @@ form {
     padding: 15px 25px;
     background: transparent;
     font-size: 16px;
-    color: $color-white;
+    color: var(--color-white);
     width: 100%;
     box-sizing: border-box;
     border-radius: 10px;
-    border: 1px solid $color-middle-blue;
+    border: 1px solid var(--color-middle-blue);
     outline: none;
     &:focus {
       // border-color: #e61c40 !important;
     }
     &:hover {
-      border-color: $color-bright-blue;
+      border-color: var(--color-bright-blue);
       cursor: pointer;
     }
 
     &::placeholder {
       font-size: 16px;
-      color: $color-white;
+      color: var(--color-white);
     }
   }
   img {
@@ -95,14 +95,14 @@ form {
 
 button {
   font-size: 23px;
-  color: $color-white;
-  background-color: $color-bright-blue;
+  color: var(--color-white);
+  background-color: var(--color-bright-blue);
   border-radius: 10px;
   transition: all 225ms ease-in-out;
   z-index: 5;
   &:hover {
     padding: 20px 40px;
-    background-color: $color-middle-blue;
+    background-color: var(--color-middle-blue);
   }
 }
 

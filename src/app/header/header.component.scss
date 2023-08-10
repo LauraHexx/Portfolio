@@ -13,8 +13,8 @@ header {
   z-index: 100;
   @include align-center-flexbox();
   justify-content: space-between;
-  padding: 37px $spacing-to-sides;
-  background-color: $color-main;
+  padding: 37px var(--spacing-to-sides);
+  background-color: var(--color-main);
 }
 
 nav {
@@ -22,10 +22,10 @@ nav {
   align-items: flex-start;
   gap: 29px;
   a {
-    color: $color-white;
+    color: var(--color-white);
     font-size: 23px;
     &:hover {
-      color: $color-bright-blue;
+      color: var(--color-bright-blue);
     }
   }
 }

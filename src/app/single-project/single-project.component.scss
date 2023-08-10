@@ -11,14 +11,14 @@
   gap: 15px;
   h3 {
     font-size: 32px;
-    color: $color-middle-blue;
+    color: var(--color-middle-blue);
   }
 }
 
 .skills-of-project {
   span {
     font-size: 23px;
-    color: $color-bright-blue;
+    color: var(--color-bright-blue);
   }
 }
 
@@ -32,23 +32,23 @@
   gap: 85px;
   button {
     font-size: 23px;
-    color: $color-white;
+    color: var(--color-white);
     border-radius: 10px;
     transition: all 225ms ease-in-out;
     &:hover {
-      background-color: $color-bright-blue;
+      background-color: var(--color-bright-blue);
     }
   }
 }
 
 .btn-live {
-  background-color: $color-middle-blue;
+  background-color: var(--color-middle-blue);
 }
 
 .btn-github {
   background-color: transparent;
-  border-color: $color-bright-blue;
-  border: 1px solid $color-bright-blue;
+  border-color: var(--color-bright-blue);
+  border: 1px solid var(--color-bright-blue);
 }
 
 .single-project {

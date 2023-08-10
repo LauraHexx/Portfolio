@@ -1,17 +1,16 @@
-$color-main: #141d2f;
-$color-bright-blue: #00bee8;
-$color-middle-blue: #4b47ff;
-$color-white: #ffffff;
-
-$spacing-btn: 15px 30px;
-
-//GENERAL SPACING LAYOUT
-
-$spacing-to-sides: 25%;
-$spacing-between-sections: 150px;
+:root {
+  --spacing-btn: 15px 30px;
+  --color-main: #141d2f;
+  --color-bright-blue: #00bee8;
+  --color-middle-blue: #4b47ff;
+  --color-white: #ffffff;
+  //GENERAL SPACING LAYOUT
+  --spacing-to-sides: 25%;
+  --spacing-between-sections: 150px;
+}
 
 @mixin general-layout() {
-  padding: $spacing-between-sections $spacing-to-sides;
+  padding: var(--spacing-between-sections) var(--spacing-to-sides);
 }
 
 ////////////////////////
@@ -38,5 +37,7 @@ $spacing-between-sections: 150px;
 }
 
 @media only screen and (max-width: 3000px) {
-  $spacing-to-sides: 20% !important;
+  :root {
+    --spacing-to-sides: 0%;
+  }
 }

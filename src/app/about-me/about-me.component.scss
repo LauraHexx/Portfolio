@@ -21,10 +21,10 @@ aside {
   gap: 42px;
   a {
     font-size: 23px;
-    color: $color-white;
+    color: var(--color-white);
     @include center-all-flexbox();
     &:hover {
-      color: $color-bright-blue;
+      color: var(--color-bright-blue);
     }
   }
 }
@@ -32,21 +32,21 @@ aside {
 .blue-line-left {
   position: absolute;
   left: 0;
-  width: $spacing-to-sides;
+  width: var(--spacing-to-sides);
   height: 3px;
-  background-color: $color-middle-blue;
+  background-color: var(--color-middle-blue);
 }
 
 .scroll-down-container {
   position: absolute;
-  right: calc($spacing-to-sides - 75px);
+  right: calc(var(--spacing-to-sides) - 75px);
   top: 88px;
   @include align-center-flexbox();
   gap: 10px;
   z-index: 3;
   transform: rotate(90deg);
   span {
-    color: $color-white;
+    color: var(--color-white);
     font-size: 23px;
   }
   img {
@@ -60,7 +60,7 @@ aside {
 main {
   display: flex;
   justify-content: space-between;
-  margin-top: $spacing-between-sections;
+  margin-top: var(--spacing-between-sections);
   z-index: 3;
 }
 
@@ -103,16 +103,16 @@ main {
     height: 509px;
     border-radius: 100%;
     object-fit: cover;
-    border: solid 4px $color-bright-blue;
+    border: solid 4px var(--color-bright-blue);
   }
 }
 
 .blue-line-right {
   position: absolute;
   right: 0;
-  width: $spacing-to-sides;
+  width: var(--spacing-to-sides);
   height: 3px;
-  background-color: $color-bright-blue;
+  background-color: var(--color-bright-blue);
 }
 
 .bg-form-about-me-container {
