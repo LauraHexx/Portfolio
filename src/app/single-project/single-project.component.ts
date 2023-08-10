@@ -6,9 +6,11 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./single-project.component.scss'],
 })
 export class SingleProjectComponent {
+  @Input() index: number;
   @Input() title: string;
   @Input() skills: Array<string>;
   @Input() description: string;
   @Input() img: string;
-  @Input() index: number;
+  @Input() linkLiveTest: string;
+  @Input() linkGithub: string;
 }

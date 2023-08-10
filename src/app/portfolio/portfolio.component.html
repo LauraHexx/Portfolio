@@ -16,11 +16,13 @@
   <main>
     <app-single-project
       *ngFor="let project of this.projects; let i = index"
+      [index]="i"
       [title]="project.title"
       [skills]="project.skills"
       [description]="project.description"
       [img]="project.img"
-      [index]="i"
+      [linkLiveTest]="project.linkLiveTest"
+      [linkGithub]="project.linkGithub"
       class="text-section"
       id="about-me"
       data-aos="zoom-in"
