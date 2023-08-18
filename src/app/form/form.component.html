@@ -1,4 +1,7 @@
-<form>
+<form
+  action="https://laura-hesidenz.developerakademie.net/send_mail/send_mail.php"
+  method="post"
+>
   <div class="single-input-field">
     <div class="input-container">
       <input
@@ -19,7 +22,7 @@
 
   <div class="single-input-field">
     <div class="input-container">
-      <input required type="email" placeholder="Your email " />
+      <input required type="email" placeholder="Your email" name="email" />
       <img
         class="d-none"
         src="./assets/img/input-error.png"
@@ -35,11 +38,10 @@
         required
         type="text"
         placeholder="Your message "
-        message="message"
+        name="message"
         style="height: 282px"
         #messageField
       />
-
       <img
         class="d-none"
         src="./assets/img/input-error.png"

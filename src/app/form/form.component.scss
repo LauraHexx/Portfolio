@@ -21,7 +21,7 @@ textarea {
   border: 1px solid var(--color-middle-blue);
   outline: none;
   &:focus {
-    // border-color: #e61c40 !important;
+    border-color: #e61c40 !important;
   }
   &:hover {
     border-color: var(--color-bright-blue);
