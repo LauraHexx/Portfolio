@@ -33,7 +33,7 @@ export class PortfolioComponent {
         'Welcome to my portfolio page! I am excited to share with you some of the projects I have worked on using Angular, TypeScript, HTML, and CSS',
       img: 'portfolio.png',
       linkLiveTest: '',
-      linkGithub: '',
+      linkGithub: 'https://github.com/LauraHexx/Portfolio',
     },
   ];
 }
