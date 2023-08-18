@@ -11,6 +11,10 @@ export class FormComponent implements AfterViewInit {
   messageFieldElement;
   sendButtonElement;
 
+  nameFieldHasValue;
+  emailFieldHasValue;
+  messageFieldHasValue;
+
   @ViewChild('form', { static: false }) form!: HTMLFormElement;
   @ViewChild('nameField', { static: false })
   nameField!: ElementRef<HTMLInputElement>;
@@ -30,16 +34,17 @@ export class FormComponent implements AfterViewInit {
 
   async sendMail() {
     console.log(this.form);
-
     this.disableForm();
-
-    //TODO: Animation
-
+    //TODO.ANIMATION
     this.collectAndSendEmailData();
-
-    //TODO: NAchricht gesendet
-
     this.enableForm();
+  }
+
+  disableForm() {
+    this.nameFieldElement.disabled = true;
+    this.emailFieldElement.disabled = true;
+    this.messageFieldElement.disabled = true;
+    this.sendButtonElement.disabled = true;
   }
 
   collectAndSendEmailData() {
@@ -58,13 +63,6 @@ export class FormComponent implements AfterViewInit {
         body: formData,
       }
     );
-  }
-
-  disableForm() {
-    this.nameFieldElement.disabled = true;
-    this.emailFieldElement.disabled = true;
-    this.messageFieldElement.disabled = true;
-    this.sendButtonElement.disabled = true;
   }
 
   enableForm() {
