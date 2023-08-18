@@ -19,6 +19,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { LogoComponent } from './logo/logo.component';
 import { GreetingComponent } from './greeting/greeting.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { GreetingComponent } from './greeting/greeting.component';
     PrivacyPolicyComponent,
     LogoComponent,
     GreetingComponent,
+    FormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],

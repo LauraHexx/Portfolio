@@ -1,0 +1,55 @@
+<form>
+  <div class="single-input-field">
+    <div class="input-container">
+      <input
+        required
+        type="text"
+        placeholder="Your name"
+        name="name"
+        #nameField
+      />
+      <img
+        class="d-none"
+        src="./assets/img/input-error.png"
+        alt="icon which shows if form is filled out correct"
+      />
+    </div>
+    <div class="d-none input-error">Your name is required</div>
+  </div>
+
+  <div class="single-input-field">
+    <div class="input-container">
+      <input required type="email" placeholder="Your email " />
+      <img
+        class="d-none"
+        src="./assets/img/input-error.png"
+        alt="icon which shows if form is filled out correct"
+      />
+    </div>
+    <div class="d-none input-error">Your email is required</div>
+  </div>
+
+  <div class="single-input-field">
+    <div class="input-container">
+      <input
+        required
+        type="text"
+        placeholder="Your message "
+        message="message"
+        style="height: 282px"
+        #messageField
+      />
+
+      <img
+        class="d-none"
+        src="./assets/img/input-error.png"
+        alt="icon which shows if form is filled out correct"
+      />
+    </div>
+    <div class="d-none input-error">Your message is empty</div>
+  </div>
+
+  <div class="btn-container">
+    <button>Send message :)</button>
+  </div>
+</form>

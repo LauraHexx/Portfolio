@@ -1,0 +1,63 @@
+@import "src/assets/styles/mixins-and-variables.scss";
+
+form {
+  @include column-flex-box();
+  gap: 35px;
+  input,
+  textarea {
+    padding: 15px 25px;
+    background: transparent;
+    font-size: 16px;
+    color: var(--color-white);
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid var(--color-middle-blue);
+    outline: none;
+    &:focus {
+      // border-color: #e61c40 !important;
+    }
+    &:hover {
+      border-color: var(--color-bright-blue);
+      cursor: pointer;
+    }
+
+    &::placeholder {
+      font-size: 16px;
+      color: var(--color-white);
+    }
+  }
+  img {
+    position: absolute;
+    right: 25px;
+  }
+}
+
+.input-container {
+  @include center-all-flexbox();
+  position: relative;
+}
+
+.input-error {
+  color: #e61c40;
+  font-size: 13px;
+}
+
+.btn-container {
+  @include center-all-flexbox();
+  height: 58px;
+  z-index: 3;
+}
+
+button {
+  font-size: 23px;
+  color: var(--color-white);
+  background-color: var(--color-bright-blue);
+  border-radius: 10px;
+  transition: all 225ms ease-in-out;
+  z-index: 5;
+  &:hover {
+    padding: 20px 40px;
+    background-color: var(--color-middle-blue);
+  }
+}
