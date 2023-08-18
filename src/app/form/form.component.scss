@@ -3,33 +3,34 @@
 form {
   @include column-flex-box();
   gap: 35px;
-  input,
-  textarea {
-    padding: 15px 25px;
-    background: transparent;
-    font-size: 16px;
-    color: var(--color-white);
-    width: 100%;
-    box-sizing: border-box;
-    border-radius: 10px;
-    border: 1px solid var(--color-middle-blue);
-    outline: none;
-    &:focus {
-      // border-color: #e61c40 !important;
-    }
-    &:hover {
-      border-color: var(--color-bright-blue);
-      cursor: pointer;
-    }
-
-    &::placeholder {
-      font-size: 16px;
-      color: var(--color-white);
-    }
-  }
   img {
     position: absolute;
     right: 25px;
+  }
+}
+
+input,
+textarea {
+  padding: 15px 25px;
+  background: transparent;
+  font-size: 16px;
+  color: var(--color-white);
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 1px solid var(--color-middle-blue);
+  outline: none;
+  &:focus {
+    // border-color: #e61c40 !important;
+  }
+  &:hover {
+    border-color: var(--color-bright-blue);
+    cursor: pointer;
+  }
+
+  &::placeholder {
+    font-size: 16px;
+    color: var(--color-white);
   }
 }
 
