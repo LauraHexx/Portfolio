@@ -8,7 +8,7 @@ section {
   left: 0;
   right: 0;
   z-index: 200;
-  background-color: $color-main;
+  background-color: var(--color-main);
 }
 
 p {

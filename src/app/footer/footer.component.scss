@@ -4,17 +4,17 @@ footer {
   @include general-layout();
   @include align-center-flexbox();
   justify-content: space-between;
-  border-top: 4px solid $color-bright-blue;
+  border-top: 4px solid var(--color-bright-blue);
 }
 
 .imprint-and-data-protection {
   @include align-center-flexbox();
   gap: 15px;
   a {
-    color: $color-white;
+    color: var(--color-white);
     font-size: 16px;
     &:hover {
-      color: $color-bright-blue;
+      color: var(--color-bright-blue);
     }
   }
 }
