@@ -1,11 +1,16 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss'],
 })
-export class FormComponent {
+export class FormComponent implements AfterViewInit {
+  nameFieldElement;
+  emailFieldElement;
+  messageFieldElement;
+  sendButtonElement;
+
   @ViewChild('form', { static: false }) form!: HTMLFormElement;
   @ViewChild('nameField', { static: false })
   nameField!: ElementRef<HTMLInputElement>;
@@ -16,26 +21,36 @@ export class FormComponent {
   @ViewChild('sendButton', { static: false })
   sendButton!: ElementRef<HTMLButtonElement>;
 
+  ngAfterViewInit() {
+    this.nameFieldElement = this.nameField.nativeElement;
+    this.emailFieldElement = this.emailField.nativeElement;
+    this.messageFieldElement = this.messageField.nativeElement;
+    this.sendButtonElement = this.sendButton.nativeElement;
+  }
+
   async sendMail() {
     console.log(this.form);
-    let nameField = this.nameField.nativeElement;
-    let emailField = this.emailField.nativeElement;
-    let messageField = this.messageField.nativeElement;
-    let sendButton = this.sendButton.nativeElement;
 
-    nameField.disabled = true;
-    emailField.disabled = true;
-    messageField.disabled = true;
-    sendButton.disabled = true;
+    this.disableForm();
 
     //TODO: Animation
 
-    let formData = new FormData();
-    formData.append('name', nameField.value);
-    formData.append('email', emailField.value);
-    formData.append('message', messageField.value);
+    this.collectAndSendEmailData();
 
-    //senden
+    //TODO: NAchricht gesendet
+
+    this.enableForm();
+  }
+
+  collectAndSendEmailData() {
+    let formData = new FormData();
+    formData.append('name', this.nameFieldElement.value);
+    formData.append('email', this.emailFieldElement.value);
+    formData.append('message', this.messageFieldElement.value);
+    this.sendDataForEmail(formData);
+  }
+
+  async sendDataForEmail(formData) {
     await fetch(
       'https://laura-hesidenz.developerakademie.net/send_mail/send_mail.php',
       {
@@ -43,11 +58,19 @@ export class FormComponent {
         body: formData,
       }
     );
+  }
 
-    //TODO: NAchricht gesendet
-    nameField.disabled = false;
-    emailField.disabled = false;
-    messageField.disabled = false;
-    sendButton.disabled = false;
+  disableForm() {
+    this.nameFieldElement.disabled = true;
+    this.emailFieldElement.disabled = true;
+    this.messageFieldElement.disabled = true;
+    this.sendButtonElement.disabled = true;
+  }
+
+  enableForm() {
+    this.nameFieldElement.disabled = false;
+    this.emailFieldElement.disabled = false;
+    this.messageFieldElement.disabled = false;
+    this.sendButtonElement.disabled = false;
   }
 }

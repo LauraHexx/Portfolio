@@ -1,4 +1,4 @@
-<form #form (submit)="sendMail()">
+<form #form ngNativeValidate (submit)="sendMail()">
   <div class="single-input-field">
     <div class="input-container">
       <input
@@ -7,11 +7,15 @@
         placeholder="Your name"
         name="name"
         #nameField
-        ngNativeValidate
       />
       <img
         class="d-none"
         src="./assets/img/input-error.png"
+        alt="icon which shows if form is filled out correct"
+      />
+      <img
+        class="d-none"
+        src="./assets/img/input-correct.png"
         alt="icon which shows if form is filled out correct"
       />
     </div>
@@ -28,8 +32,14 @@
         #emailField
       />
       <img
+        #emailFieldErrorImage
         class="d-none"
         src="./assets/img/input-error.png"
+        alt="icon which shows if form is filled out correct"
+      />
+      <img
+        class="d-none"
+        src="./assets/img/input-correct.png"
         alt="icon which shows if form is filled out correct"
       />
     </div>
@@ -41,14 +51,20 @@
       <input
         required
         type="text"
-        placeholder="Your message "
+        placeholder="Your message"
         name="message"
         style="height: 282px"
         #messageField
       />
       <img
+        #messageFieldErrorImage
         class="d-none"
         src="./assets/img/input-error.png"
+        alt="icon which shows if form is filled out correct"
+      />
+      <img
+        class="d-none"
+        src="./assets/img/input-correct.png"
         alt="icon which shows if form is filled out correct"
       />
     </div>
