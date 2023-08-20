@@ -30,6 +30,7 @@ h3 {
   margin: 0;
 }
 
+h1,
 h2 {
   font-size: 90px;
 }
@@ -45,4 +46,11 @@ body::-webkit-scrollbar-thumb {
 
 .d-none {
   display: none;
+}
+
+@media only screen and (max-width: 2150px) {
+  h1,
+  h2 {
+    font-size: 65px;
+  }
 }

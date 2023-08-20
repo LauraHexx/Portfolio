@@ -35,7 +35,6 @@ section {
 .name-title-container {
   @include column-flex-box();
   h1 {
-    font-size: 90px;
     margin: 0;
   }
   h2 {
@@ -72,4 +71,25 @@ button {
   transform: rotate(3deg);
   height: 623px;
   z-index: 2;
+}
+
+@media only screen and (max-width: 2150px) {
+  .profile-img-big {
+    width: 554px;
+    height: 610px;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .bg-profile-img-big[_ngcontent-ng-c3537999258] {
+    width: 578px;
+  }
+
+  button {
+    font-size: 20px !important;
+  }
+
+  .bg-gradient {
+    top: 542px;
+  }
 }
