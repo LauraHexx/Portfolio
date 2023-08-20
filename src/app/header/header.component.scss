@@ -13,7 +13,7 @@ header {
   z-index: 100;
   @include align-center-flexbox();
   justify-content: space-between;
-  padding: 37px var(--spacing-to-sides);
+  padding: 30px var(--spacing-to-sides);
   background-color: var(--color-main);
 }
 
