@@ -126,3 +126,24 @@ main {
     height: 900px;
   }
 }
+
+@media only screen and (max-width: 2150px) {
+  .icons-and-email {
+    a {
+      font-size: 20px;
+    }
+  }
+
+  .scroll-down-container {
+    span {
+      font-size: 20px;
+    }
+  }
+
+  .profile-img-small-container {
+    img {
+      width: 440px;
+      height: 450px;
+    }
+  }
+}

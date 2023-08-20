@@ -72,3 +72,20 @@
     order: 2;
   }
 }
+
+@media only screen and (max-width: 2150px) {
+  .single-project {
+    img {
+      width: 405px;
+      height: 417px;
+    }
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  button {
+    font-size: 20px !important;
+  }
+}
