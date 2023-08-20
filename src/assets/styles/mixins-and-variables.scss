@@ -48,3 +48,9 @@
     --spacing-to-sides: 10%;
   }
 }
+
+@media only screen and (max-width: 1530px) {
+  :root {
+    --spacing-to-sides: 5%;
+  }
+}

@@ -39,7 +39,6 @@ section {
   }
   h2 {
     color: var(--color-middle-blue) !important;
-    font-size: 58px !important;
     margin: 0;
   }
 }
@@ -65,7 +64,7 @@ button {
 
 .bg-gradient {
   position: absolute;
-  top: 645px;
+  top: 640px;
   width: 108vw;
   left: -18px;
   transform: rotate(3deg);
@@ -91,5 +90,13 @@ button {
 
   .bg-gradient {
     top: 538px;
+  }
+
+  h2 {
+    font-size: 46px !important;
+  }
+
+  .i-am-container {
+    font-size: 55px;
   }
 }
