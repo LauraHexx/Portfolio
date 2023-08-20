@@ -28,10 +28,26 @@ nav {
       color: var(--color-bright-blue);
     }
   }
+  img {
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+  }
 }
 
 @media only screen and (max-width: 2150px) {
   a {
     font-size: 20px !important;
+  }
+}
+
+@media only screen and (max-width: 635px) {
+  nav {
+    a {
+      display: none;
+    }
+    img {
+      display: flex;
+    }
   }
 }
