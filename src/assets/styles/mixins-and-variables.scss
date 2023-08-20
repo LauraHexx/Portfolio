@@ -52,5 +52,12 @@
 @media only screen and (max-width: 1530px) {
   :root {
     --spacing-to-sides: 5%;
+    --spacing-btn: 12px 27px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  :root {
+    --spacing-to-sides: 3.5%;
   }
 }
