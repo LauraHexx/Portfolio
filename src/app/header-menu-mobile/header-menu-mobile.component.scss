@@ -1,0 +1,25 @@
+@import "src/assets/styles/mixins-and-variables.scss";
+
+section {
+  @include center-all-flexbox();
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  background-color: #141d2fcc;
+  backdrop-filter: blur(2px);
+}
+
+.mobile-menu {
+  @include column-flex-box();
+  gap: 29px;
+  a {
+    color: var(--color-white);
+    font-size: 23px;
+    &:hover {
+      color: var(--color-bright-blue);
+    }
+  }
+}

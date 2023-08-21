@@ -213,3 +213,17 @@ button {
     font-size: 20px;
   }
 }
+
+@media only screen and (max-width: 360px) {
+  h1 {
+    font-size: 25px !important;
+  }
+
+  h2 {
+    font-size: 20px !important;
+  }
+
+  .i-am-container {
+    font-size: 17px;
+  }
+}

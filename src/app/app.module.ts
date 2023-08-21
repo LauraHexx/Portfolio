@@ -19,6 +19,8 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { LogoComponent } from './logo/logo.component';
 import { GreetingComponent } from './greeting/greeting.component';
 import { FormComponent } from './form/form.component';
+import { HeaderMenuMobileComponent } from './header-menu-mobile/header-menu-mobile.component';
+import { HeaderMenuDestopComponent } from './header-menu-destop/header-menu-destop.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { FormComponent } from './form/form.component';
     LogoComponent,
     GreetingComponent,
     FormComponent,
+    HeaderMenuMobileComponent,
+    HeaderMenuDestopComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
