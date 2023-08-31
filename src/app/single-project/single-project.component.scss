@@ -10,20 +10,19 @@
   @include column-flex-box();
   gap: 15px;
   h3 {
-    font-size: 32px;
     color: var(--color-middle-blue);
   }
 }
 
 .skills-of-project {
   span {
-    font-size: 23px;
+    font-size: var(--font-size-two);
     color: var(--color-bright-blue);
   }
 }
 
 .description-project {
-  font-size: 16px;
+  font-size: var(--font-size-one);
   text-align: justify;
 }
 
@@ -31,10 +30,7 @@
   @include align-center-flexbox();
   gap: 85px;
   button {
-    font-size: 23px;
     color: var(--color-white);
-    border-radius: 10px;
-    transition: all 225ms ease-in-out;
     &:hover {
       background-color: var(--color-bright-blue);
     }
