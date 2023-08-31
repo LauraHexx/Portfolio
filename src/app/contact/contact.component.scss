@@ -31,16 +31,16 @@ section {
 }
 
 .problem-solve-text {
-  font-size: 32px;
+  font-size: var(--font-size-three);
   font-weight: 700;
 }
 
 .contact-me-text {
-  font-size: 16px;
+  font-size: var(--font-size-one);
 }
 
 .need-developer-text {
-  font-size: 16px;
+  font-size: var(--font-size-one);
 }
 
 .go-up-container {
