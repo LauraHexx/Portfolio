@@ -12,7 +12,7 @@ footer {
   gap: 15px;
   a {
     color: var(--color-white);
-    font-size: 16px;
+    font-size: var(--font-size-one);
     &:hover {
       color: var(--color-bright-blue);
     }
@@ -20,5 +20,5 @@ footer {
 }
 
 span {
-  font-size: 16px;
+  font-size: var(--font-size-one);
 }
