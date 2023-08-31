@@ -19,6 +19,7 @@ section {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  font-size: var(--font-size-one);
   img {
     object-fit: cover;
     transition: all 125ms ease-in-out;
