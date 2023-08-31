@@ -13,7 +13,7 @@ input,
 textarea {
   padding: 15px 25px;
   background: transparent;
-  font-size: 16px;
+  font-size: var(--font-size-one);
   color: var(--color-white);
   width: 100%;
   box-sizing: border-box;
@@ -29,7 +29,7 @@ textarea {
   }
 
   &::placeholder {
-    font-size: 16px;
+    font-size: var(--font-size-one);
     color: var(--color-white);
   }
 }
@@ -51,14 +51,10 @@ textarea {
 }
 
 button {
-  font-size: 23px;
   color: var(--color-white);
   background-color: var(--color-bright-blue);
-  border-radius: 10px;
-  transition: all 225ms ease-in-out;
   z-index: 5;
   &:hover {
-    padding: 20px 40px;
     background-color: var(--color-middle-blue);
   }
 }
