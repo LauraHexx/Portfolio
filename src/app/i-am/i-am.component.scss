@@ -2,30 +2,21 @@
 
 section {
   @include general-layout();
+  @include column-flex-box();
+}
+
+.content {
   @include align-center-flexbox();
   justify-content: space-between;
-  position: relative;
 }
-
-/*
-
-.bg-profile-img-big {
-  position: absolute;
-  bottom: 0;
-  width: clamp(400px, 40%, 707px);
-  height: clamp(400px, 90%, 750px);
-  z-index: 0;
-}
-
-*/
 
 .profile-img-big {
   background-image: url("/assets/img/background/i-am-profile-image-form.png");
   background-position: center bottom;
   background-size: contain;
   background-repeat: no-repeat;
-  width: clamp(250px, 30%, 646px);
-  height: clamp(250px, 80%, 705px);
+  width: clamp(250px, 45%, 650px);
+  height: clamp(250px, 95%, 750px);
   object-fit: cover;
   z-index: 1;
 }
@@ -64,11 +55,12 @@ button {
 }
 
 .bg-gradient {
-  position: absolute;
-  top: 640px;
-  width: 108vw;
-  left: -18px;
-  transform: rotate(3deg);
-  height: 623px;
-  z-index: 2;
+  background-image: url(/assets/img/background/i-am-gradient.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 220;
+  height: 205px;
+  transform: scaleX(-1) rotate(4deg);
+  position: relative;
+  top: -95px;
 }
