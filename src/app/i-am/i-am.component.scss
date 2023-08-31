@@ -24,8 +24,8 @@ section {
   background-position: center bottom;
   background-size: contain;
   background-repeat: no-repeat;
-  width: clamp(400px, 30%, 646px);
-  height: clamp(400px, 80%, 705px);
+  width: clamp(250px, 30%, 646px);
+  height: clamp(250px, 80%, 705px);
   object-fit: cover;
   z-index: 1;
 }

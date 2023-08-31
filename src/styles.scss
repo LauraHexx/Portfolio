@@ -1,5 +1,9 @@
 @import "src/assets/styles/mixins-and-variables.scss";
 
+* {
+  outline: red dashed 1px;
+}
+
 html {
   scroll-behavior: smooth;
   color: var(--color-white);
