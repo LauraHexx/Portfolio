@@ -22,8 +22,8 @@ nav {
   align-items: flex-start;
   gap: 29px;
   a {
+    font-size: var(--font-size-two);
     color: var(--color-white);
-    font-size: 23px;
     &:hover {
       color: var(--color-bright-blue);
     }

@@ -2,6 +2,7 @@
 
 html {
   scroll-behavior: smooth;
+  color: var(--color-white);
 }
 
 body {
@@ -16,24 +17,27 @@ a {
 }
 
 button {
-  border: none;
-  padding: var(--spacing-btn);
-  font-size: 23px;
-  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
-}
-
-span,
-h1,
-h2,
-h3 {
-  color: var(--color-white);
-  margin: 0;
+  font-size: 23px;
+  padding: var(--spacing-btn);
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: none;
+  transition: all 225ms ease-in-out;
+  &:hover {
+    padding: var(--spacing-btn-hover);
+  }
 }
 
 h1,
 h2 {
   font-size: 90px;
+  margin: 0;
+}
+
+h3 {
+  font-size: 32px;
+  margin: 0;
 }
 
 body::-webkit-scrollbar {
@@ -47,11 +51,4 @@ body::-webkit-scrollbar-thumb {
 
 .d-none {
   display: none !important;
-}
-
-@media only screen and (max-width: 2150px) {
-  h1,
-  h2 {
-    font-size: 65px;
-  }
 }

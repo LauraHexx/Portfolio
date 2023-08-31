@@ -20,7 +20,7 @@ aside {
   justify-content: space-between;
   gap: 42px;
   a {
-    font-size: 23px;
+    font-size: var(--font-size-two);
     color: var(--color-white);
     @include center-all-flexbox();
     &:hover {
@@ -47,7 +47,7 @@ aside {
   transform: rotate(90deg);
   span {
     color: var(--color-white);
-    font-size: 23px;
+    font-size: var(font-size-two);
   }
   img {
     transform: rotate(-90deg);
@@ -74,7 +74,7 @@ main {
 }
 
 .introduction {
-  font-size: 16px;
+  font-size: var(--font-size-one);
 }
 
 .icons-and-text-container {
