@@ -3,6 +3,7 @@
 section {
   @include general-layout();
   @include column-flex-box();
+  justify-content: flex-end;
 }
 
 .content {
@@ -55,12 +56,7 @@ button {
 }
 
 .bg-gradient {
-  background-image: url(/assets/img/background/i-am-gradient.png);
-  background-size: 100%;
-  background-repeat: no-repeat;
+  background-image: linear-gradient(to top, #141d2f, #172136);
   z-index: 220;
-  height: 205px;
-  transform: scaleX(-1) rotate(4deg);
-  position: relative;
-  top: -95px;
+  height: 150px;
 }
