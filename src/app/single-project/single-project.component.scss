@@ -68,3 +68,47 @@
     order: 2;
   }
 }
+
+@media only screen and (max-width: 1445px) {
+  .single-project {
+    img {
+      width: 350px;
+      height: 390px;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .single-project {
+    @include column-flex-box();
+    gap: 0px;
+  }
+
+  .details-and-btns-container {
+    align-items: center;
+    width: unset;
+    h3,
+    span {
+      text-align: center;
+    }
+  }
+
+  .skills-of-project {
+    text-align: center;
+  }
+
+  .place-project-left {
+    img {
+      order: unset !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .single-project {
+    img {
+      width: 320px;
+      height: 320px;
+    }
+  }
+}

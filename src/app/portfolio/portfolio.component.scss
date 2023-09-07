@@ -18,7 +18,7 @@ section {
 }
 
 .blue-line-left {
-  width: 100px;
+  width: 20%;
   height: 3px;
   background-color: var(--color-middle-blue);
 }
@@ -29,6 +29,7 @@ section {
 
 .blue-line-right-container {
   @include align-center-flexbox();
+  justify-content: flex-end;
   position: relative;
 }
 
@@ -74,4 +75,37 @@ main {
   width: 757px;
   height: 908px;
   z-index: -1;
+}
+
+@media only screen and (max-width: 980px) {
+  .blue-line-left {
+    width: 70px;
+    margin-right: 50px;
+  }
+
+  .blue-line-right {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  main {
+    gap: 200px !important;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .blue-line-left {
+    margin-right: 70px;
+  }
+
+  .blue-line-right {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .blue-line-right {
+    width: 50%;
+  }
 }
