@@ -3,7 +3,7 @@
 section {
   @include general-layout();
   @include column-flex-box();
-  justify-content: flex-end;
+  position: relative;
 }
 
 .content {
@@ -55,8 +55,14 @@ button {
   }
 }
 
-.bg-gradient {
-  background-image: linear-gradient(to top, #141d2f, #172136);
-  z-index: 220;
-  height: 150px;
+.background-gradient {
+  position: absolute;
+  top: 175px;
+  right: 0;
+  left: -100px;
+  z-index: 10;
+  transform: rotate(9deg);
+  img {
+    width: 100%;
+  }
 }
