@@ -22,3 +22,21 @@ footer {
 span {
   font-size: var(--font-size-one);
 }
+
+@media only screen and (max-width: 745px) {
+  footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @include column-flex-box();
+    align-items: center;
+  }
+
+  .content-footer {
+    @include column-flex-box();
+    gap: 30px;
+  }
+
+  .logo-and-links-container {
+    gap: 35px;
+  }
+}
