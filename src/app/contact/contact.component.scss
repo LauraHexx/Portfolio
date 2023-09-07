@@ -15,6 +15,7 @@ section {
 
 .blue-line-left {
   width: 7%;
+  min-width: 50px;
   height: 3px;
   background-color: var(--color-middle-blue);
 }
@@ -55,8 +56,39 @@ section {
   left: 0;
   width: 650px;
   height: 650px;
+  z-index: -1;
 }
 
 app-form {
   width: 50%;
+}
+
+@media only screen and (max-width: 1400px) {
+  .problem-solve-text {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 735px) {
+  .main-container {
+    @include column-flex-box();
+    gap: 70px;
+  }
+
+  .text-container {
+    width: unset;
+  }
+
+  .bg-form {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 408px;
+    height: 322px;
+    z-index: -1;
+  }
+
+  app-form {
+    width: unset;
+  }
 }
