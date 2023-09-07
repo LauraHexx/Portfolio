@@ -151,12 +151,17 @@ body::-webkit-scrollbar-thumb {
   h1,
   h2 {
     font-size: 45px;
-    margin: 0;
   }
 }
 
 @media only screen and (max-width: 380px) {
   :root {
     --spacing-to-sides: 4%;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  h2 {
+    font-size: 35px;
   }
 }
