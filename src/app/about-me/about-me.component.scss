@@ -1,4 +1,4 @@
-@import "src/assets/styles/mixins-and-variables.scss";
+@import "src/assets/styles/general-mixins-variables.scss";
 
 section {
   @include general-layout();
@@ -125,5 +125,14 @@ main {
   img {
     width: 572px;
     height: 900px;
+  }
+}
+
+@media only screen and (max-width: 1850px) {
+  .profile-img-small-container {
+    img {
+      width: 400px;
+      height: 400px;
+    }
   }
 }
