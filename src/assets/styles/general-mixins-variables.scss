@@ -1,9 +1,6 @@
 //VARIABLES/////////////////
 
 :root {
-  --spacing-btn: 15px 30px;
-  --spacing-btn-hover: 20px 40px;
-
   --color-main: #141d2f;
   --color-bright-blue: #00bee8;
   --color-middle-blue: #4b47ff;
@@ -13,9 +10,10 @@
   --font-size-two: 23px;
   --font-size-three: 64px;
 
-  //GENERAL SPACING LAYOUT
   --spacing-to-sides: 25%;
   --spacing-between-sections: 150px;
+  --spacing-btn: 15px 30px;
+  --spacing-btn-hover: 20px 40px;
 }
 
 //MIXINS/////////////////
@@ -122,6 +120,12 @@ body::-webkit-scrollbar-thumb {
   :root {
     --spacing-to-sides: 10%;
   }
+
+  h1,
+  h2 {
+    font-size: 60px;
+    margin: 0;
+  }
 }
 
 @media only screen and (max-width: 1530px) {
@@ -130,8 +134,22 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+@media only screen and (max-width: 600px) {
+  :root {
+    --font-size-one: 15px;
+    --font-size-two: 21px;
+    --font-size-three: 60px;
+  }
+
+  h1,
+  h2 {
+    font-size: 45px;
+    margin: 0;
+  }
+}
+
 @media only screen and (max-width: 380px) {
   :root {
-    --spacing-to-sides: 3.5%;
+    --spacing-to-sides: 4%;
   }
 }

@@ -136,3 +136,50 @@ main {
     }
   }
 }
+
+@media only screen and (max-width: 1400px) {
+  .profile-img-small-container {
+    img {
+      width: 360px;
+      height: 360px;
+    }
+  }
+
+  .text-section {
+    @include column-flex-box();
+    align-items: flex-start;
+    gap: 35px;
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .img-section {
+    display: none;
+  }
+
+  .scroll-down-container {
+    display: none;
+  }
+
+  .text-section {
+    width: unset;
+  }
+}
+
+@media only screen and (max-width: 615px) {
+  .icon-with-img-container {
+    img {
+      width: 45px;
+      height: 45px;
+    }
+  }
+
+  .icons-and-text-container {
+    gap: 20px;
+    padding-left: 0px;
+  }
+  .mail-adress {
+    display: none !important;
+  }
+}
