@@ -76,3 +76,62 @@ section {
   height: 793px;
   z-index: -1;
 }
+
+@media only screen and (max-width: 2450px) {
+  .blue-line-right {
+    width: 120px;
+  }
+}
+
+@media only screen and (max-width: 1900px) {
+  .blue-line-right {
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 1520px) {
+  .single-skill {
+    img {
+      width: 45px;
+      height: 45px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1215px) {
+  section {
+    @include general-layout();
+    @include column-flex-box();
+    gap: 100px;
+  }
+
+  .my-skills-text-container {
+    width: 80%;
+  }
+
+  .headline-container {
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .blue-line-right {
+    position: unset;
+    width: 50px;
+  }
+
+  .icons-container {
+    order: 2;
+    width: unset;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .blue-line-right {
+    display: none;
+  }
+
+  .my-skills-text-container {
+    width: 100%;
+  }
+}

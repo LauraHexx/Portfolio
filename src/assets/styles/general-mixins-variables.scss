@@ -67,7 +67,7 @@ a {
 
 button {
   cursor: pointer;
-  font-size: 23px;
+  font-size: var(--fonz-size-two);
   padding: var(--spacing-btn);
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
@@ -139,6 +139,9 @@ body::-webkit-scrollbar-thumb {
     --font-size-one: 15px;
     --font-size-two: 21px;
     --font-size-three: 60px;
+
+    --spacing-btn: 13px 28px;
+    --spacing-btn-hover: 16px 34px;
   }
 
   h1,
