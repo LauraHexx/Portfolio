@@ -62,18 +62,18 @@ main {
 .bg-form-1 {
   position: absolute;
   left: 0;
-  top: 950px;
-  width: 757px;
-  height: 908px;
+  top: 359px;
+  width: 340px;
+  height: 757px;
   z-index: -1;
 }
 
 .bg-form-2 {
   position: absolute;
   right: 0;
-  bottom: 0;
-  width: 757px;
-  height: 908px;
+  bottom: -206px;
+  width: 340px;
+  height: 757px;
   z-index: -1;
 }
 
@@ -90,7 +90,13 @@ main {
 
 @media only screen and (max-width: 900px) {
   main {
-    gap: 200px !important;
+    gap: 120px !important;
+  }
+
+  .bg-form-1 {
+    top: 180px;
+    width: 287px;
+    height: 560px;
   }
 }
 

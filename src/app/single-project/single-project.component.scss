@@ -112,3 +112,9 @@
     }
   }
 }
+
+@media only screen and (max-width: 450px) {
+  .btns-container {
+    gap: 34px;
+  }
+}
