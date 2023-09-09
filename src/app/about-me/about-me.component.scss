@@ -40,7 +40,7 @@ aside {
 .scroll-down-container {
   position: absolute;
   right: calc(var(--spacing-to-sides) - 75px);
-  top: 88px;
+  top: 67px;
   @include align-center-flexbox();
   gap: 10px;
   z-index: 3;

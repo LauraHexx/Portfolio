@@ -1,4 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { HeaderMenuMobileService } from './../services/header-menu-mobile.service';
+
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header-menu-destop',
@@ -6,5 +8,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./header-menu-destop.component.scss'],
 })
 export class HeaderMenuDestopComponent {
-  @Input() mobileMenuIsOpen: boolean;
+  constructor(public headerMenuMobileService: HeaderMenuMobileService) {}
 }

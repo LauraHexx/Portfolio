@@ -33,6 +33,7 @@
     color: var(--color-white);
     &:hover {
       background-color: var(--color-bright-blue);
+      padding: var(--spacing-btn);
     }
   }
 }
@@ -116,5 +117,11 @@
 @media only screen and (max-width: 450px) {
   .btns-container {
     gap: 34px;
+  }
+
+  .skills-of-project {
+    span {
+      font-size: 20px;
+    }
   }
 }

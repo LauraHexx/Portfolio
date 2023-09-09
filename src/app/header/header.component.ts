@@ -5,10 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {
-  mobileMenuIsOpen: boolean = false;
-
-  toggleMobileMenu() {
-    this.mobileMenuIsOpen = !this.mobileMenuIsOpen;
-  }
-}
+export class HeaderComponent {}

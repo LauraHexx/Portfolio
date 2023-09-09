@@ -11,7 +11,7 @@
   --font-size-three: 64px;
 
   --spacing-to-sides: 25%;
-  --spacing-between-sections: 150px;
+  --spacing-between-sections: 130px;
   --spacing-btn: 15px 30px;
   --spacing-btn-hover: 20px 40px;
 }
@@ -46,7 +46,7 @@
 //GENERAL/////////////////
 
 * {
-  //outline: red dashed 1px;
+  // outline: red dashed 1px;
 }
 
 html {
@@ -78,7 +78,6 @@ button {
   }
 }
 
-h1,
 h2 {
   font-size: 90px;
   margin: 0;
@@ -121,7 +120,6 @@ body::-webkit-scrollbar-thumb {
     --spacing-to-sides: 10%;
   }
 
-  h1,
   h2 {
     font-size: 60px;
     margin: 0;
@@ -148,7 +146,6 @@ body::-webkit-scrollbar-thumb {
     --spacing-btn-hover: 16px 34px;
   }
 
-  h1,
   h2 {
     font-size: 45px;
   }

@@ -4,6 +4,7 @@ section {
   @include general-layout();
   @include column-flex-box();
   position: relative;
+  padding-bottom: 0;
 }
 
 .content {
@@ -38,9 +39,13 @@ section {
 
 .name-title-container {
   @include column-flex-box();
+  h1 {
+    font-size: 90px;
+    margin: 0;
+  }
   h2 {
     color: var(--color-middle-blue) !important;
-    font-size: 55px !important;
+    font-size: 55px;
   }
 }
 
@@ -72,10 +77,79 @@ button {
   }
 }
 
-@media only screen and (max-width: 1215px) {
+@media only screen and (max-width: 1900px) {
+  .i-am-container {
+    font-size: 50px;
+  }
+  h1 {
+    font-size: 65px !important;
+  }
+
+  h2 {
+    font-size: 45px !important;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .content {
+    @include column-flex-box();
+    align-items: center;
+    gap: 100px;
+  }
+
+  .profile-img-big {
+    width: clamp(350px, 60%, 650px);
+    height: clamp(350px, 95%, 750px);
+  }
+
   .background-gradient {
     img {
-      top: -280px;
+      top: -480px;
+      height: 428px;
     }
+  }
+
+  .i-am-container {
+    font-size: 40px;
+  }
+  h1 {
+    font-size: 45px !important;
+  }
+
+  h2 {
+    font-size: 35px !important;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .i-am-container {
+    font-size: 30px;
+  }
+  h1 {
+    font-size: 35px !important;
+  }
+
+  h2 {
+    font-size: 25px !important;
+  }
+
+  .background-gradient {
+    img {
+      top: -425px;
+      height: 365px;
+    }
+  }
+}
+
+@media only screen and (max-width: 395px) {
+  .i-am-container {
+    font-size: 25px;
+  }
+  h1 {
+    font-size: 30px !important;
+  }
+
+  h2 {
+    font-size: 20px !important;
   }
 }

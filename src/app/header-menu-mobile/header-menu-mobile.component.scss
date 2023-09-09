@@ -2,12 +2,12 @@
 
 section {
   @include center-all-flexbox();
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 5;
+  z-index: 500;
   background-color: #141d2fcc;
   backdrop-filter: blur(2px);
 }

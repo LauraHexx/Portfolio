@@ -1,10 +1,17 @@
 @import "src/assets/styles/general-mixins-variables.scss";
 
 footer {
-  @include general-layout();
+  @include center-all-flexbox();
+  padding: 0px var(--spacing-to-sides);
+  border-top: 4px solid var(--color-bright-blue);
+  height: 300px;
+  z-index: 100;
+}
+
+.content-footer {
   @include align-center-flexbox();
   justify-content: space-between;
-  border-top: 4px solid var(--color-bright-blue);
+  width: 100%;
 }
 
 .imprint-and-data-protection {
@@ -28,12 +35,13 @@ span {
     padding-top: 40px;
     padding-bottom: 40px;
     @include column-flex-box();
-    align-items: center;
   }
 
   .content-footer {
     @include column-flex-box();
-    gap: 30px;
+    gap: 25px;
+    align-items: flex-start;
+    width: unset;
   }
 
   .logo-and-links-container {

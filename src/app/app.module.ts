@@ -17,7 +17,6 @@ import { ImprintComponent } from './imprint/imprint.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { LogoComponent } from './logo/logo.component';
-import { GreetingComponent } from './greeting/greeting.component';
 import { FormComponent } from './form/form.component';
 import { HeaderMenuMobileComponent } from './header-menu-mobile/header-menu-mobile.component';
 import { HeaderMenuDestopComponent } from './header-menu-destop/header-menu-destop.component';
@@ -38,7 +37,6 @@ import { HeaderMenuDestopComponent } from './header-menu-destop/header-menu-dest
     MainPageComponent,
     PrivacyPolicyComponent,
     LogoComponent,
-    GreetingComponent,
     FormComponent,
     HeaderMenuMobileComponent,
     HeaderMenuDestopComponent,

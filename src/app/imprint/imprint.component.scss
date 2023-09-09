@@ -2,6 +2,7 @@
 
 section {
   @include general-layout();
+  margin-bottom: 259px;
 }
 
 * {
@@ -10,10 +11,27 @@ section {
 
 a {
   text-decoration: underline;
-
   font-size: 16px;
 }
 
 p {
   font-size: 16px;
+}
+
+h2 {
+  font-size: 27px;
+}
+
+h3 {
+  font-size: 23px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  section {
+    margin-bottom: unset;
+  }
 }

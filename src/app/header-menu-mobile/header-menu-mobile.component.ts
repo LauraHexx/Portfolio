@@ -1,3 +1,4 @@
+import { HeaderMenuMobileService } from './../services/header-menu-mobile.service';
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -6,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./header-menu-mobile.component.scss'],
 })
 export class HeaderMenuMobileComponent {
-  @Input() mobileMenuIsOpen: boolean;
+  constructor(public headerMenuMobileService: HeaderMenuMobileService) {}
 }

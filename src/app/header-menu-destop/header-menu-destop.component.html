@@ -2,10 +2,11 @@
 <header>
   <app-logo></app-logo>
   <nav>
-    <a href="#about-me">About Me</a>
+    <a href="#aside">About Me</a>
     <a href="#skills">Skills</a>
     <a href="#portfolio">Portfolio</a>
     <img
+      (click)="this.headerMenuMobileService.toggleMobileMenu()"
       src="./assets/img/header-menu-mobile.png"
       alt="menu to open options"
       class="d-none"

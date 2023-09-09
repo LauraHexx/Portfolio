@@ -34,3 +34,14 @@ nav {
     cursor: pointer;
   }
 }
+
+@media only screen and (max-width: 660px) {
+  nav {
+    a {
+      display: none;
+    }
+    img {
+      display: flex !important;
+    }
+  }
+}

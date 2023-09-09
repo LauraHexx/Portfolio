@@ -1,6 +1,9 @@
-<section [class.d-none]="!mobileMenuIsOpen">
+<section
+  (click)="this.headerMenuMobileService.toggleMobileMenu()"
+  *ngIf="headerMenuMobileService.mobileMenuIsOpen"
+>
   <div class="mobile-menu">
-    <a href="#about-me">About Me</a>
+    <a href="#aside">About Me</a>
     <a href="#skills">Skills</a>
     <a href="#portfolio">Portfolio</a>
   </div>
