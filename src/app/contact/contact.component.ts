@@ -23,11 +23,19 @@ export class ContactComponent implements OnInit {
     });
   }
 
-  onMouseOver(): void {
+  /**
+ * Handles the mouse over event.
+ * Sets the 'isHovered' variable to true.
+ */
+  onMouseOver() {
     this.isHovered = true;
   }
 
-  onMouseOut(): void {
+/**
+ * Handles the mouse out event.
+ * Sets the 'isHovered' variable to false.
+ */
+  onMouseOut() {
     this.isHovered = false;
   }
 
