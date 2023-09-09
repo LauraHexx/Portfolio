@@ -30,9 +30,9 @@ export class FormComponent implements AfterViewInit {
 
   async sendMail() {
     this.disableForm();
-
     let formData = this.getData();
     await this.sendData(formData);
+    this.resetForm();
     this.enableForm();
   }
 
@@ -66,5 +66,11 @@ export class FormComponent implements AfterViewInit {
     emailField.disabled = false;
     messageField.disabled = false;
     sendButton.disabled = false;
+  }
+
+  resetForm() {
+    nameField.value = '';
+    emailField.value = '';
+    messageField.value = '';
   }
 }
