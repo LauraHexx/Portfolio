@@ -47,7 +47,12 @@ section {
 .go-up-container {
   display: flex;
   justify-content: flex-end;
-  cursor: pointer;
+  cursor: default;
+  img {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 
 .bg-form {
