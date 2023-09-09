@@ -1,4 +1,9 @@
-import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+
+let nameField: HTMLInputElement;
+let emailField: HTMLInputElement;
+let messageField: HTMLInputElement;
+let sendButton: HTMLButtonElement;
 
 @Component({
   selector: 'app-form',
@@ -6,69 +11,60 @@ import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./form.component.scss'],
 })
 export class FormComponent implements AfterViewInit {
-  nameFieldElement;
-  emailFieldElement;
-  messageFieldElement;
-  sendButtonElement;
-
-  nameFieldHasValue;
-  emailFieldHasValue;
-  messageFieldHasValue;
-
-  @ViewChild('form', { static: false }) form!: HTMLFormElement;
-  @ViewChild('nameField', { static: false })
-  nameField!: ElementRef<HTMLInputElement>;
-  @ViewChild('emailField', { static: false })
-  emailField!: ElementRef<HTMLInputElement>;
-  @ViewChild('messageField', { static: false })
-  messageField!: ElementRef<HTMLTextAreaElement>;
+  @ViewChild('form', { static: false }) form: HTMLFormElement;
+  @ViewChild('nameFieldElement', { static: false })
+  nameFieldElementRef: ElementRef;
+  @ViewChild('emailFieldElement', { static: false })
+  emailFieldElementRef: ElementRef;
+  @ViewChild('messageFieldElement', { static: false })
+  messageFieldElementRef: ElementRef;
   @ViewChild('sendButton', { static: false })
-  sendButton!: ElementRef<HTMLButtonElement>;
+  sendButtonRef: ElementRef;
 
   ngAfterViewInit() {
-    this.nameFieldElement = this.nameField.nativeElement;
-    this.emailFieldElement = this.emailField.nativeElement;
-    this.messageFieldElement = this.messageField.nativeElement;
-    this.sendButtonElement = this.sendButton.nativeElement;
+    nameField = this.nameFieldElementRef.nativeElement;
+    emailField = this.emailFieldElementRef.nativeElement;
+    messageField = this.messageFieldElementRef.nativeElement;
+    sendButton = this.sendButtonRef.nativeElement;
   }
 
   async sendMail() {
-    console.log(this.form);
     this.disableForm();
-    //TODO.ANIMATION
-    this.collectAndSendEmailData();
+
+    let formData = this.getData();
+    await this.sendData(formData);
     this.enableForm();
   }
 
   disableForm() {
-    this.nameFieldElement.disabled = true;
-    this.emailFieldElement.disabled = true;
-    this.messageFieldElement.disabled = true;
-    this.sendButtonElement.disabled = true;
+    nameField.disabled = true;
+    emailField.disabled = true;
+    messageField.disabled = true;
+    sendButton.disabled = true;
   }
 
-  collectAndSendEmailData() {
+  getData() {
     let formData = new FormData();
-    formData.append('name', this.nameFieldElement.value);
-    formData.append('email', this.emailFieldElement.value);
-    formData.append('message', this.messageFieldElement.value);
-    this.sendDataForEmail(formData);
+    formData.append('name', nameField.value);
+    formData.append('email', emailField.value);
+    formData.append('message', messageField.value);
+    return formData;
   }
 
-  async sendDataForEmail(formData) {
-    await fetch(
+  async sendData(formData) {
+    fetch(
       'https://laura-hesidenz.developerakademie.net/send_mail/send_mail.php',
       {
-        method: 'POST',
+        method: 'post',
         body: formData,
       }
     );
   }
 
   enableForm() {
-    this.nameFieldElement.disabled = false;
-    this.emailFieldElement.disabled = false;
-    this.messageFieldElement.disabled = false;
-    this.sendButtonElement.disabled = false;
+    nameField.disabled = false;
+    emailField.disabled = false;
+    messageField.disabled = false;
+    sendButton.disabled = false;
   }
 }
