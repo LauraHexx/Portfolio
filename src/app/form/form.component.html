@@ -1,11 +1,21 @@
-<form #form (submit)="sendMail()" ngNativeValidate method="post">
+<form
+  [formGroup]="contactForm"
+  #form
+  (submit)="sendMail()"
+  ngNativeValidate
+  method="post"
+>
   <div class="single-input-field">
     <div class="input-container">
       <input
+        required
+        formControlName="nameForm"
         #nameFieldElement
         type="text"
         placeholder="Your name"
         name="name"
+        maxlength="30"
+        minlength="3"
       />
       <img
         src="./assets/img/input-error.png"
@@ -18,15 +28,18 @@
       />
     </div>
     <div class="d-none input-error">Your name is required</div>
+    <div class="d-none input-error">Please write at least 3 letters</div>
   </div>
 
   <div class="single-input-field">
     <div class="input-container">
       <input
         #emailFieldElement
+        formControlName="emailForm"
         type="email"
         placeholder="Your email"
         name="email"
+        maxlength="50"
       />
       <img
         class="d-none"
@@ -40,12 +53,14 @@
       />
     </div>
     <div class="d-none input-error">Your email is required</div>
+    <div class="d-none input-error">Please enter a valid email address</div>
   </div>
 
   <div class="single-input-field">
     <div class="input-container">
       <input
         #messageFieldElement
+        messageForm
         type="text"
         placeholder="Your message"
         name="message"
@@ -65,7 +80,14 @@
     <div class="d-none input-error">Your message is empty</div>
   </div>
 
-  <div class="btn-container">
-    <button #sendButton>Send message :)</button>
+  <div class="btn-and-sucess-container">
+    <button #sendButton type="submit">Send message :)</button>
+    <div class="sucess" *ngIf="emailWasSent">
+      <span>Message was successfully sent</span>
+      <img
+        src="./assets/img/input-correct.png"
+        alt="icon which shows that message was sent"
+      />
+    </div>
   </div>
 </form>

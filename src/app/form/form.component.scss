@@ -10,11 +10,11 @@ form {
 
 input,
 textarea {
+  width: 100%;
   padding: 15px 25px;
   background: transparent;
   font-size: var(--font-size-one);
   color: var(--color-white);
-  width: 100%;
   box-sizing: border-box;
   border-radius: 10px;
   border: 1px solid var(--color-middle-blue);
@@ -43,17 +43,32 @@ textarea {
   font-size: 13px;
 }
 
-.btn-container {
-  @include center-all-flexbox();
-  height: 58px;
+.btn-and-sucess-container {
+  @include column-flex-box();
+  align-items: center;
+  justify-content: space-between;
+  height: 110px;
+
   z-index: 3;
+  button {
+    color: var(--color-white);
+    background-color: var(--color-bright-blue);
+    z-index: 5;
+    width: 250px;
+    &:hover {
+      background-color: var(--color-middle-blue);
+    }
+  }
 }
 
-button {
-  color: var(--color-white);
-  background-color: var(--color-bright-blue);
-  z-index: 5;
-  &:hover {
-    background-color: var(--color-middle-blue);
+.sucess {
+  @include align-center-flexbox();
+  gap: 15px;
+  span {
+    color: #70e61c;
+    font-size: var(--font-size-one);
+  }
+  img {
+    position: unset;
   }
 }
