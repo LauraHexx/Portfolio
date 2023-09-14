@@ -26,7 +26,6 @@ textarea {
     border-color: var(--color-bright-blue);
     cursor: pointer;
   }
-
   &::placeholder {
     font-size: var(--font-size-one);
     color: var(--color-white);
@@ -51,12 +50,20 @@ textarea {
 
   z-index: 3;
   button {
+    @include center-all-flexbox();
     color: var(--color-white);
     background-color: var(--color-bright-blue);
     z-index: 5;
     width: 250px;
+    height: 50px;
     &:hover {
       background-color: var(--color-middle-blue);
+      padding: var(--spacing-btn);
+    }
+    img {
+      position: unset;
+      width: 24px;
+      height: 21px;
     }
   }
 }
@@ -70,5 +77,20 @@ textarea {
   }
   img {
     position: unset;
+  }
+}
+
+.disabledInput {
+  &:hover {
+    border-color: var(--color-middle-blue);
+    cursor: not-allowed;
+  }
+}
+
+.disabledButton {
+  &:hover {
+    padding: var(--spacing-btn);
+    cursor: not-allowed;
+    background-color: var(--color-bright-blue) !important;
   }
 }

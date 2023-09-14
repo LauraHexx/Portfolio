@@ -1,16 +1,9 @@
-<form
-  [formGroup]="contactForm"
-  #form
-  (submit)="sendMail()"
-  ngNativeValidate
-  method="post"
->
+<form [formGroup]="contactForm" (submit)="sendingMail()" method="post">
   <div class="single-input-field">
     <div class="input-container">
       <input
-        required
+        [ngClass]="{ disabledInput: contactForm.disabled }"
         formControlName="nameForm"
-        #nameFieldElement
         type="text"
         placeholder="Your name"
         name="name"
@@ -18,6 +11,7 @@
         minlength="3"
       />
       <img
+        class="d-none"
         src="./assets/img/input-error.png"
         alt="icon which shows if form is filled out correct"
       />
@@ -34,7 +28,7 @@
   <div class="single-input-field">
     <div class="input-container">
       <input
-        #emailFieldElement
+        [ngClass]="{ disabledInput: contactForm.disabled }"
         formControlName="emailForm"
         type="email"
         placeholder="Your email"
@@ -59,8 +53,8 @@
   <div class="single-input-field">
     <div class="input-container">
       <input
-        #messageFieldElement
-        messageForm
+        [ngClass]="{ disabledInput: contactForm.disabled }"
+        formControlName="messageForm"
         type="text"
         placeholder="Your message"
         name="message"
@@ -77,11 +71,22 @@
         alt="icon which shows if form is filled out correct"
       />
     </div>
-    <div class="d-none input-error">Your message is empty</div>
+    <div class="d-none input-error">Your message is required</div>
   </div>
 
   <div class="btn-and-sucess-container">
-    <button #sendButton type="submit">Send message :)</button>
+    <button
+      [ngClass]="{ disabledButton: contactForm.disabled }"
+      #sendButton
+      type="submit"
+    >
+      <ng-container *ngIf="!isLoading; else loadingContent">
+        Send message :)
+      </ng-container>
+      <ng-template #loadingContent>
+        <img src="./assets/img/spinner.gif" alt="Loading..." />
+      </ng-template>
+    </button>
     <div class="sucess" *ngIf="emailWasSent">
       <span>Message was successfully sent</span>
       <img
