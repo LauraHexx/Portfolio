@@ -1,8 +1,17 @@
-<form [formGroup]="contactForm" (submit)="sendingMail()" method="post">
+<form
+  ngNativeValidate
+  [formGroup]="contactForm"
+  (submit)="sendingMail()"
+  method="post"
+>
   <div class="single-input-field">
     <div class="input-container">
       <input
+        required
         [ngClass]="{ disabledInput: contactForm.disabled }"
+        [class.red-border]="!nameFieldIsValid && nameFieldIsValid !== undefined"
+        [class.green-border]="nameFieldIsValid"
+        (keyup)="checkInputField(this.nameField, 'nameFieldIsValid')"
         formControlName="nameForm"
         type="text"
         placeholder="Your name"
@@ -11,12 +20,12 @@
         minlength="3"
       />
       <img
-        class="d-none"
+        *ngIf="nameFieldIsValid !== undefined && !nameFieldIsValid"
         src="./assets/img/input-error.png"
         alt="icon which shows if form is filled out correct"
       />
       <img
-        class="d-none"
+        *ngIf="nameFieldIsValid"
         src="./assets/img/input-correct.png"
         alt="icon which shows if form is filled out correct"
       />
@@ -28,7 +37,13 @@
   <div class="single-input-field">
     <div class="input-container">
       <input
+        required
         [ngClass]="{ disabledInput: contactForm.disabled }"
+        [class.red-border]="
+          !emailFieldIsValid && emailFieldIsValid !== undefined
+        "
+        [class.green-border]="emailFieldIsValid"
+        (keyup)="checkInputField(this.emailField, 'emailFieldIsValid')"
         formControlName="emailForm"
         type="email"
         placeholder="Your email"
@@ -36,12 +51,12 @@
         maxlength="50"
       />
       <img
-        class="d-none"
+        *ngIf="emailFieldIsValid !== undefined && !emailFieldIsValid"
         src="./assets/img/input-error.png"
         alt="icon which shows if form is filled out correct"
       />
       <img
-        class="d-none"
+        *ngIf="emailFieldIsValid"
         src="./assets/img/input-correct.png"
         alt="icon which shows if form is filled out correct"
       />
@@ -53,7 +68,15 @@
   <div class="single-input-field">
     <div class="input-container">
       <input
+        required
         [ngClass]="{ disabledInput: contactForm.disabled }"
+        [class.red-border]="
+          !messageFieldIsValid && messageFieldIsValid !== undefined
+        "
+        [class.green-border]="messageFieldIsValid"
+        (keyup)="
+          checkInputField(this.messageFieldIsValid, 'messageFieldIsValid')
+        "
         formControlName="messageForm"
         type="text"
         placeholder="Your message"
@@ -61,12 +84,12 @@
         style="height: 282px"
       />
       <img
-        class="d-none"
+        *ngIf="messageFieldIsValid !== undefined && !messageFieldIsValid"
         src="./assets/img/input-error.png"
         alt="icon which shows if form is filled out correct"
       />
       <img
-        class="d-none"
+        *ngIf="messageFieldIsValid"
         src="./assets/img/input-correct.png"
         alt="icon which shows if form is filled out correct"
       />
@@ -83,6 +106,7 @@
       <ng-container *ngIf="!isLoading; else loadingContent">
         Send message :)
       </ng-container>
+
       <ng-template #loadingContent>
         <img src="./assets/img/spinner.gif" alt="Loading..." />
       </ng-template>

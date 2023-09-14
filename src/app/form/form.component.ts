@@ -10,6 +10,9 @@ export class FormComponent implements AfterViewInit {
   nameField;
   emailField;
   messageField;
+  nameFieldIsValid;
+  emailFieldIsValid;
+  messageFieldIsValid;
   sendButton;
   emailWasSent = false;
   isLoading = false;
@@ -37,18 +40,14 @@ export class FormComponent implements AfterViewInit {
   });
 
   async sendingMail() {
-    this.contactForm.disable();
     this.isLoading = true;
-
+    this.contactForm.disable();
     let formData = this.getData();
     await this.sendData(formData);
-
     await this.showSucessMessage();
-    this.isLoading = false;
-    console.log(this.isLoading);
-
     this.contactForm.enable();
     this.contactForm.reset();
+    this.isLoading = false;
   }
 
   getData() {
@@ -57,6 +56,14 @@ export class FormComponent implements AfterViewInit {
     formData.append('email', this.emailField.value);
     formData.append('message', this.messageField.value);
     return formData;
+  }
+
+  checkInputField(inputField, inputValidVariable) {
+    if (inputField?.invalid && (inputField?.dirty || inputField?.touched)) {
+      this[inputValidVariable] = false;
+    } else {
+      this[inputValidVariable] = true;
+    }
   }
 
   async sendData(formData) {
@@ -71,17 +78,11 @@ export class FormComponent implements AfterViewInit {
 
   async showSucessMessage() {
     this.emailWasSent = true;
-
     setTimeout(() => {
       this.emailWasSent = false;
-    }, 3000);
+    }, 2000);
   }
-
   /*
-
- 
-
- 
   async sendMail() {
     this.disableForm();
     // this.checkData();
@@ -91,20 +92,12 @@ export class FormComponent implements AfterViewInit {
     this.enableForm();
     this.showSucessMessage();
   }
-
-
-
+  
 
   checkData() {
     //this.checkNameField();
     //this.checkEmailField();
     //this.checkMessageField();
   }
-
-  
-
-
- 
-
   */
 }
