@@ -97,23 +97,4 @@ export class FormComponent implements AfterViewInit {
     this.emailFieldIsValid = undefined;
     this.messageFieldIsValid = undefined;
   }
-
-  /*
-  async sendMail() {
-    this.disableForm();
-    // this.checkData();
-    let formData = this.getData();
-    await this.sendData(formData);
-    this.resetForm();
-    this.enableForm();
-    this.showSucessMessage();
-  }
-  
-
-  checkData() {
-    //this.checkNameField();
-    //this.checkEmailField();
-    //this.checkMessageField();
-  }
-  */
 }

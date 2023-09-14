@@ -12,7 +12,7 @@ input,
 textarea {
   width: 100%;
   padding: 15px 55px 15px 25px;
-  background-color: transparent !important;
+  background-color: var(--color-main) !important;
   font-size: var(--font-size-one);
   color: var(--color-white);
   box-sizing: border-box;
@@ -20,7 +20,6 @@ textarea {
   border: 1px solid var(--color-middle-blue);
   outline: none;
   font-family: var(--font-family);
-
   &:hover {
     border-color: var(--color-bright-blue);
     cursor: pointer;
@@ -29,12 +28,13 @@ textarea {
     font-size: var(--font-size-one);
     color: var(--color-white);
   }
+  &:focus:invalid {
+    border: 2px solid red;
+  }
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:focus {
-  box-shadow: 0 0 0 1000px white inset;
-  -webkit-text-fill-color: #333;
+input:autofill {
+  background-color: transparent !important;
 }
 
 textarea::-webkit-scrollbar {
@@ -58,7 +58,7 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 .input-error {
-  color: #e61c40;
+  color: red;
   font-size: 13px;
 }
 
