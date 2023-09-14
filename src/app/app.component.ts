@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import AOS from 'aos';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -11,5 +11,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     AOS.init();
+    window.addEventListener('load', AOS.refresh);
   }
 }
