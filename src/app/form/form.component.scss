@@ -11,19 +11,16 @@ form {
 input,
 textarea {
   width: 100%;
-  padding: 15px 25px;
-  background: transparent;
+  padding: 15px 55px 15px 25px;
+  background-color: transparent !important;
   font-size: var(--font-size-one);
   color: var(--color-white);
   box-sizing: border-box;
   border-radius: 10px;
   border: 1px solid var(--color-middle-blue);
   outline: none;
-  /*
-  &:focus {
-    border-color: #e61c40 !important;
-  }
-  */
+  font-family: var(--font-family);
+
   &:hover {
     border-color: var(--color-bright-blue);
     cursor: pointer;
@@ -31,6 +28,27 @@ textarea {
   &::placeholder {
     font-size: var(--font-size-one);
     color: var(--color-white);
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  box-shadow: 0 0 0 1000px white inset;
+  -webkit-text-fill-color: #333;
+}
+
+textarea::-webkit-scrollbar {
+  width: 3px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: #00bee8;
+  border-radius: 2px;
+}
+
+.message-container {
+  img {
+    top: 18px !important;
   }
 }
 

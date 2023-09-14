@@ -14,6 +14,8 @@
   --spacing-between-sections: 130px;
   --spacing-btn: 15px 30px;
   --spacing-btn-hover: 20px 40px;
+
+  --font-family: Poppins;
 }
 
 //MIXINS/////////////////
@@ -56,7 +58,7 @@ html {
 
 body {
   margin: 0;
-  font-family: Poppins;
+  font-family: var(--font-family);
   overflow-x: hidden;
   background-color: var(--color-main);
 }

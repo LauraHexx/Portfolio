@@ -48,7 +48,7 @@
         type="email"
         placeholder="Your email"
         name="email"
-        maxlength="50"
+        maxlength="30"
       />
       <img
         *ngIf="emailFieldIsValid !== undefined && !emailFieldIsValid"
@@ -66,8 +66,8 @@
   </div>
 
   <div class="single-input-field">
-    <div class="input-container">
-      <input
+    <div class="input-container message-container">
+      <textarea
         required
         [ngClass]="{ disabledInput: contactForm.disabled }"
         [class.red-border]="
@@ -81,8 +81,10 @@
         type="text"
         placeholder="Your message"
         name="message"
-        style="height: 282px"
-      />
+        style="height: 282px; position: relative"
+        cols="30"
+        rows="10"
+      ></textarea>
       <img
         *ngIf="messageFieldIsValid !== undefined && !messageFieldIsValid"
         src="./assets/img/input-error.png"

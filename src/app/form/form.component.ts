@@ -47,6 +47,8 @@ export class FormComponent implements AfterViewInit {
     await this.showSucessMessage();
     this.contactForm.enable();
     this.contactForm.reset();
+    this.resetStyling();
+    this.resetValidationVariables();
     this.isLoading = false;
   }
 
@@ -82,6 +84,20 @@ export class FormComponent implements AfterViewInit {
       this.emailWasSent = false;
     }, 2000);
   }
+
+  resetStyling() {
+    const inputs = document.querySelectorAll('input');
+    inputs.forEach((input) => {
+      input.classList.remove('green-border', 'red-border');
+    });
+  }
+
+  resetValidationVariables() {
+    this.nameFieldIsValid = undefined;
+    this.emailFieldIsValid = undefined;
+    this.messageFieldIsValid = undefined;
+  }
+
   /*
   async sendMail() {
     this.disableForm();
