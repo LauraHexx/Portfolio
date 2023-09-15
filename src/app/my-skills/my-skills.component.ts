@@ -28,7 +28,7 @@ export class MySkillsComponent {
       image: 'firebase.png',
     },
     {
-      imnameage: 'Git',
+      name: 'Git',
       image: 'git.png',
     },
     {
