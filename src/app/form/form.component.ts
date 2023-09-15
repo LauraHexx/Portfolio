@@ -20,6 +20,10 @@ export class FormComponent implements AfterViewInit {
   @ViewChild('sendButton', { static: false })
   sendButtonRef: ElementRef;
 
+  /**
+   * Lifecycle hook that is called after the view is initialized.
+   * @async
+   */
   ngAfterViewInit() {
     this.nameField = this.contactForm.get('nameForm');
     this.emailField = this.contactForm.get('emailForm');
@@ -27,6 +31,9 @@ export class FormComponent implements AfterViewInit {
     this.sendButton = this.sendButtonRef.nativeElement;
   }
 
+  /**
+   * Form group for the contact form.
+   */
   contactForm = new FormGroup({
     nameForm: new FormControl('', [
       Validators.required,
@@ -39,19 +46,34 @@ export class FormComponent implements AfterViewInit {
     ]),
   });
 
+  /**
+   * Sends an email when the form is submitted.
+   * Initiates loading state, disables form, sends data, displays success message,
+   * resets form and reverts loading state.
+   * @async
+   */
   async sendingMail() {
     this.isLoading = true;
     this.contactForm.disable();
-    let formData = this.getData();
-    await this.sendData(formData);
+    this.getAndSendData();
     await this.showSucessMessage();
-    this.contactForm.enable();
-    this.contactForm.reset();
-    this.resetStyling();
-    this.resetValidationVariables();
+    this.enableAndResetForm();
     this.isLoading = false;
   }
 
+  /**
+   * Retrieves form data and sends it.
+   * @async
+   */
+  async getAndSendData() {
+    let formData = this.getData();
+    await this.sendData(formData);
+  }
+
+  /**
+   * Retrieves form data.
+   * @returns {FormData} The form data.
+   */
   getData() {
     let formData = new FormData();
     formData.append('name', this.nameField.value);
@@ -60,14 +82,11 @@ export class FormComponent implements AfterViewInit {
     return formData;
   }
 
-  checkInputField(inputField, inputValidVariable) {
-    if (inputField?.invalid && (inputField?.dirty || inputField?.touched)) {
-      this[inputValidVariable] = false;
-    } else {
-      this[inputValidVariable] = true;
-    }
-  }
-
+  /**
+   * Sends form data to the server.
+   * @param {FormData} formData - The form data to send.
+   * @async
+   */
   async sendData(formData) {
     await fetch(
       'https://laura-hesidenz.developerakademie.net/send_mail/send_mail.php',
@@ -78,6 +97,10 @@ export class FormComponent implements AfterViewInit {
     );
   }
 
+  /**
+   * Shows a success message after the email is sent.
+   * @async
+   */
   async showSucessMessage() {
     this.emailWasSent = true;
     setTimeout(() => {
@@ -85,6 +108,21 @@ export class FormComponent implements AfterViewInit {
     }, 2000);
   }
 
+  /**
+   * Enables and resets the form after email is sent.
+   * @async
+   */
+  enableAndResetForm() {
+    this.contactForm.enable();
+    this.contactForm.reset();
+    this.resetStyling();
+    this.resetValidationVariables();
+  }
+
+  /**
+   * Resets the border-styling of input fields.
+   * @async
+   */
   resetStyling() {
     const inputs = document.querySelectorAll('input');
     inputs.forEach((input) => {
@@ -92,9 +130,27 @@ export class FormComponent implements AfterViewInit {
     });
   }
 
+  /**
+   * Resets the validation variables for input fields.
+   * @async
+   */
   resetValidationVariables() {
     this.nameFieldIsValid = undefined;
     this.emailFieldIsValid = undefined;
     this.messageFieldIsValid = undefined;
+  }
+
+  /**
+   * Checks the validity of an input field.
+   * @param {AbstractControl} inputField - The input field to check.
+   * @param {string} inputValidVariable - The variable to store the validity status.
+   * @async
+   */
+  checkInputField(inputField, inputValidVariable) {
+    if (inputField?.invalid && (inputField?.dirty || inputField?.touched)) {
+      this[inputValidVariable] = false;
+    } else {
+      this[inputValidVariable] = true;
+    }
   }
 }

@@ -101,7 +101,9 @@
 
   <div class="btn-and-sucess-container">
     <button
-      [ngClass]="{ disabledButton: contactForm.disabled }"
+      [ngClass]="{
+        disabledButton: contactForm.disabled
+      }"
       #sendButton
       type="submit"
     >
