@@ -1,56 +1,11 @@
 <section id="skills">
   <div class="icons-container">
-    <div class="single-skill">
-      <img src="./assets/img/skills/skill-angular.png" alt="icon of Angular" />
-      <span>Angular</span>
-    </div>
-    <div class="single-skill">
+    <div *ngFor="let skill of this.skills; let i = index" class="single-skill">
       <img
-        src="./assets/img/skills/skill-typescript.png"
-        alt="icon of TypeScript"
+        src="./assets/img/skills/{{ skill.image }}"
+        alt="icon of {{ skill.name }}"
       />
-      <span>TypeScript</span>
-    </div>
-    <div class="single-skill">
-      <img
-        src="./assets/img/skills/skill-javaScript.png"
-        alt="icon of javaScript"
-      />
-      <span>JavaScript</span>
-    </div>
-    <div class="single-skill">
-      <img src="./assets/img/skills/skill-html.png" alt="icon of html" />
-      <span>HTML</span>
-    </div>
-    <div class="single-skill">
-      <img
-        src="./assets/img/skills/skill-firebase.png"
-        alt="icon of firebase"
-      />
-      <span>Firebase</span>
-    </div>
-    <div class="single-skill">
-      <img src="./assets/img/skills/skill-git.png" alt="icon of git" />
-      <span>Git</span>
-    </div>
-    <div class="single-skill">
-      <img src="./assets/img/skills/skill-css.png" alt="icon of css" />
-      <span>CSS</span>
-    </div>
-    <div class="single-skill">
-      <img src="./assets/img/skills/skill-api.png" alt="icon of api" />
-      <span>Rest-Api</span>
-    </div>
-    <div class="single-skill">
-      <img src="./assets/img/skills/skill-scrum.png" alt="icon of scrum" />
-      <span>Scrum</span>
-    </div>
-    <div class="single-skill">
-      <img
-        src="./assets/img/skills/skill-material-design.png"
-        alt="icon of material-design"
-      />
-      <span>Material Design</span>
+      <span>{{ skill.name }}</span>
     </div>
   </div>
   <div
