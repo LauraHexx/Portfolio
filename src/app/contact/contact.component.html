@@ -6,7 +6,9 @@
   <div class="main-container">
     <div
       class="text-container"
-      data-aos="fade-right"
+      [attr.data-aos]="
+        this.ScrollingAnimationService.isMobileView ? 'zoom-in' : 'fade-right'
+      "
       data-aos-easing="ease-in-sine"
       [attr.data-aos-anchor-placement]="
         this.ScrollingAnimationService.isMobileView
