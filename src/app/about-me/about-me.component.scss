@@ -5,6 +5,7 @@ section {
   @include column-flex-box();
   position: relative;
   gap: 60px;
+  padding-top: 0;
 }
 
 aside {
