@@ -61,6 +61,7 @@ body {
   font-family: var(--font-family);
   overflow-x: hidden;
   background-color: var(--color-main);
+  scroll-behavior: smooth;
 }
 
 a {
