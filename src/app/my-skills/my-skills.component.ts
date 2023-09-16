@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+import { ScrollingAnimationService } from './../services/scrolling-animation.service';
 
 @Component({
   selector: 'app-my-skills',
@@ -6,6 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./my-skills.component.scss'],
 })
 export class MySkillsComponent {
+  constructor(public ScrollingAnimationService: ScrollingAnimationService) {
+    this.ScrollingAnimationService.checkScreenSize();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event): void {
+    this.ScrollingAnimationService.checkScreenSize();
+  }
+
   skills = [
     {
       name: 'Angular',

@@ -7,8 +7,18 @@
     <div
       class="text-container"
       data-aos="fade-right"
-      data-aos-duration="300"
       data-aos-easing="ease-in-sine"
+      [attr.data-aos-anchor-placement]="
+        this.ScrollingAnimationService.isMobileView
+          ? 'top-bottom'
+          : 'top-center'
+      "
+      [attr.data-aos-duration]="
+        this.ScrollingAnimationService.isMobileView ? '300' : '0'
+      "
+      [attr.data-aos-delay]="
+        this.ScrollingAnimationService.isMobileView ? '200' : '0'
+      "
     >
       <span class="problem-solve-text">Got a problem to solve?</span>
       <span class="contact-me-text"

@@ -1,18 +1,23 @@
-import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { ScrollingAnimationService } from './../services/scrolling-animation.service';
+import { Component, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import * as AOS from 'aos';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
 })
-export class ContactComponent implements OnInit {
-  ngOnInit(): void {
-    AOS.init();
+export class ContactComponent {
+  isHovered: boolean = false;
+
+  constructor(public ScrollingAnimationService: ScrollingAnimationService) {
+    this.ScrollingAnimationService.checkScreenSize();
   }
 
-  isHovered: boolean = false;
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event): void {
+    this.ScrollingAnimationService.checkScreenSize();
+  }
 
   /**
    * Handles the mouse over event.

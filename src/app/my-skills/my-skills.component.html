@@ -12,8 +12,15 @@
     class="my-skills-text-container"
     id="about-me"
     data-aos="fade-up"
-    data-aos-duration="300"
-    data-aos-anchor-placement="top-center"
+    [attr.data-aos-anchor-placement]="
+      this.ScrollingAnimationService.isMobileView ? 'top-bottom' : 'top-center'
+    "
+    [attr.data-aos-duration]="
+      this.ScrollingAnimationService.isMobileView ? '300' : '0'
+    "
+    [attr.data-aos-delay]="
+      this.ScrollingAnimationService.isMobileView ? '200' : '0'
+    "
   >
     <div class="headline-container">
       <h2>My Skills</h2>
