@@ -16,7 +16,9 @@
     <div
       class="text-section"
       id="about-me"
-      data-aos="fade-up"
+      [attr.data-aos]="
+        this.ScrollingAnimationService.isMobileView ? 'fade-right' : 'fade-up'
+      "
       [attr.data-aos-anchor-placement]="
         this.ScrollingAnimationService.isMobileView
           ? 'top-bottom'
@@ -26,7 +28,7 @@
         this.ScrollingAnimationService.isMobileView ? '300' : '0'
       "
       [attr.data-aos-delay]="
-        this.ScrollingAnimationService.isMobileView ? '200' : '0'
+        this.ScrollingAnimationService.isMobileView ? '150' : '0'
       "
     >
       <h2>About me</h2>
