@@ -42,7 +42,8 @@ export class PortfolioComponent {
       description:
         'A Slack clone app designed for team communication and collaboration, featuring organized chats and channels.',
       img: 'dabubble.png',
-      linkLiveTest: '',
+      linkLiveTest:
+        'https://laura-hesidenz.developerakademie.net/angular-projects/DABubble',
       linkGithub: 'https://github.com/LauraHexx/DABubble',
     },
   ];
