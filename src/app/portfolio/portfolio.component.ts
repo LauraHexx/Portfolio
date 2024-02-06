@@ -37,13 +37,13 @@ export class PortfolioComponent {
       linkGithub: 'https://github.com/LauraHexx/El-Pollo-Loco',
     },
     {
-      title: 'Portfolio',
-      skills: ['Angular ', 'Typescript', 'HTML', 'CSS'],
+      title: 'DA Bubble',
+      skills: ['Firebase', 'Angular ', 'Typescript', 'HTML', 'SCSS'],
       description:
-        'Welcome to my portfolio page! I am excited to share with you some of the projects I have worked on using Angular, TypeScript, HTML, and CSS',
-      img: 'portfolio.png',
+        'A Slack clone app designed for team communication and collaboration, featuring organized chats and channels.',
+      img: 'dabubble.png',
       linkLiveTest: '',
-      linkGithub: 'https://github.com/LauraHexx/Portfolio',
+      linkGithub: 'https://github.com/LauraHexx/DABubble',
     },
   ];
 }
