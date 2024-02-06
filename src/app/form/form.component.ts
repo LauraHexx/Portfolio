@@ -67,7 +67,7 @@ export class FormComponent implements AfterViewInit {
    */
   async getAndSendData() {
     let formData = this.getData();
-    await this.sendData(formData);
+    await this.sendMail(formData);
   }
 
   /**
@@ -83,18 +83,25 @@ export class FormComponent implements AfterViewInit {
   }
 
   /**
-   * Sends form data to the server.
+   * Sends form data
    * @param {FormData} formData - The form data to send.
-   * @async
    */
-  async sendData(formData) {
-    await fetch(
-      'https://laura-hesidenz.developerakademie.net/send_mail/send_mail.php',
-      {
-        method: 'post',
-        body: formData,
-      }
-    );
+  sendMail(formData) {
+    event.preventDefault();
+
+    fetch('https://formspree.io/f/xbjngpll', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        Accept: 'application/json',
+      },
+    })
+      .then(() => {
+        //window.location.href = "./send_mail.html";
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
   /**
