@@ -88,20 +88,15 @@ export class FormComponent implements AfterViewInit {
    */
   sendMail(formData) {
     event.preventDefault();
-
     fetch('https://formspree.io/f/xbjngpll', {
       method: 'POST',
       body: formData,
       headers: {
         Accept: 'application/json',
       },
-    })
-      .then(() => {
-        //window.location.href = "./send_mail.html";
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    }).catch((error) => {
+      console.log(error);
+    });
   }
 
   /**
